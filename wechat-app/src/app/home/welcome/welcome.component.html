@@ -1,0 +1,43 @@
+<div class="form">
+  <form class="login-form" [formGroup]="homeForm" (ngSubmit)="onSubmit()">
+    <div kendoWindowContainer></div>
+    <div class="jumbotron">
+      <h1 class="display-4">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+        featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" (click)="showWindow()" role="button">Learn more</a>
+      </p>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="video">
+          <video controls height="300" (click)="toggleVideo()" #videoPlayer>
+            <source src="{{videoSource}}" type="video/webm" />
+            Browser not supported
+          </video>
+        </div>
+        <!--<video src="video" height="300"  controls preload="metadata" >//插入视频-->
+          <!--<source src="video" type="video/mp4">-->
+          <!--&lt;!&ndash;<source src="视频.ogv" type="video/ogg">&ndash;&gt;-->
+          <!--&lt;!&ndash;<source src="视频.webm" type="video/webm">&ndash;&gt;-->
+        <!--</video>-->
+        <h1 class="display-4">Fluid jumbotron</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent. please
+          tell us with <a href="mailto: houixnjian7@gmail">houixnjian7@gmail</a></p>
+      </div>
+    </div>
+    <div class="input-group " style="width: 20%">
+      <input class="form-control" placeholder="dd/MM/yyyy" ngbTooltip="{{f.searchDate.length}}"
+             name="dp" formControlName="searchDate" ngbDatepicker #d="ngbDatepicker"
+             [ngClass]="{ 'is-invalid': f.searchDate.invalid}">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+          <img src="../../../assets/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
