@@ -1,0 +1,131 @@
+cors:
+  allowedOrigins: "http://localhost:9011"
+  allowedMethods: GET,POST,DELETE,PUT,OPTIONS
+  allowedHeaders: Origin,X-Requested-With,Content-Type,Accept,Accept-Encoding,Accept-Language,Host,Referer,Connection,User-Agent,Authorization
+
+# 日期处理 转为json时显示方式
+
+spring:
+  jackson:
+    date-format: yyyy-MM-dd # 使用字符串设置
+    time-zone: GMT+8
+    serialization:
+      write-dates-as-timestamps: false
+  # datasource
+  datasource:
+    dbcp2.validation-query: select 1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wechat?default-character-set=utf8mb4&serverTimezone=GMT&createDatabaseIfNotExist=true&useSSL=false&verifyServerCertificate=true
+    username: root
+    password: Root@123
+
+  banner:
+      charset: utf-8
+      image:
+        location: classpath:banner.jpg
+      location: classpath:banner.txt
+  resources:
+    add-mappings: true
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+
+# 日志级别从低到高分为TRACE < DEBUG < INFO < WARN < ERROR < FATAL，如果设置为WARN，则低于WARN的信息都不会输出
+logging:
+  file: target/app.log
+  level:
+    ROOT: info
+    com.xinjian: trace
+    #org.springframework: debug
+
+
+# mybatis
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+management:
+  server:
+    port: 8090
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: health,info
+  endpoint:
+    shutdown: enabled
+    health:
+      show-details: never
+
+jwt:
+  header: Authorization
+  secret: mySecret
+  expiration: 7200
+  issuer: ITRunner
+  authenticationPath: /auth/**
+
+info:
+  app:
+    name: wechat
+    version: 1.0
+
+---
+spring:
+  profiles: dev
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true
+  datasource:
+    initialization-mode: always
+server:
+  servlet:
+  port: 8888
+#  ssl:
+#    key-store: classpath:keystore.jks
+#    key-store-password: Wo24ni@jiu
+#    keyStoreType: JKS
+#    keyAlias: tomcatssl
+
+---
+spring:
+  profiles: prod
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true
+  datasource:
+    initialization-mode: always
+server:
+  servlet:
+  port: 8888
+#  ssl:
+#    key-store: classpath:keystore.jks
+#    key-store-password: Wo24ni2jiu
+#    keyStoreType: JKS
+#    keyAlias: tomcatssl
+
+---
+spring:
+  profiles:
+    active: dev
+
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /api-docs
+management:
+  server:
+    port: 8043
+
+
+
+
