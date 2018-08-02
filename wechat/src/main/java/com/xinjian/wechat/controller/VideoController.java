@@ -8,7 +8,7 @@ import java.io.File;
 
 
 @RestController
-@RequestMapping(value="/auth")
+@RequestMapping(value="/video")
 public class VideoController {
 
     @GetMapping(value="/home")

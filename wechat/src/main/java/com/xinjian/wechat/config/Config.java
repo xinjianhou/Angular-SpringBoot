@@ -1,11 +1,13 @@
 package com.xinjian.wechat.config;
 
+import lombok.Data;
 import org.springframework.stereotype.Component;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 @Component
 @ConfigurationProperties
 public class Config {
@@ -14,22 +16,8 @@ public class Config {
 
     private Jwt jwt = new Jwt();
 
-    public Cors getCors() {
-        return cors;
-    }
 
-    public void setCors(Cors cors) {
-        this.cors = cors;
-    }
-
-    public Jwt getJwt() {
-        return jwt;
-    }
-
-    public void setJwt(Jwt jwt) {
-        this.jwt = jwt;
-    }
-
+    @Data
     public static class Cors {
         private List<String> allowedOrigins = new ArrayList<>();
 
@@ -37,31 +25,10 @@ public class Config {
 
         private List<String> allowedHeaders = new ArrayList<>();
 
-        public List<String> getAllowedOrigins() {
-            return allowedOrigins;
-        }
 
-        public void setAllowedOrigins(List<String> allowedOrigins) {
-            this.allowedOrigins = new ArrayList<>(allowedOrigins);
-        }
-
-        public List<String> getAllowedMethods() {
-            return allowedMethods;
-        }
-
-        public void setAllowedMethods(List<String> allowedMethods) {
-            this.allowedMethods = new ArrayList<>(allowedMethods);
-        }
-
-        public List<String> getAllowedHeaders() {
-            return allowedHeaders;
-        }
-
-        public void setAllowedHeaders(List<String> allowedHeaders) {
-            this.allowedHeaders = new ArrayList<>(allowedHeaders);
-        }
     }
 
+    @Data
     public static class Jwt {
         private String header;
 
@@ -73,44 +40,5 @@ public class Config {
 
         private String authenticationPath;
 
-        public String getHeader() {
-            return header;
-        }
-
-        public void setHeader(String header) {
-            this.header = header;
-        }
-
-        public String getSecret() {
-            return secret;
-        }
-
-        public void setSecret(String secret) {
-            this.secret = secret;
-        }
-
-        public Long getExpiration() {
-            return expiration;
-        }
-
-        public void setExpiration(Long expiration) {
-            this.expiration = expiration;
-        }
-
-        public String getIssuer() {
-            return issuer;
-        }
-
-        public void setIssuer(String issuer) {
-            this.issuer = issuer;
-        }
-
-        public String getAuthenticationPath() {
-            return authenticationPath;
-        }
-
-        public void setAuthenticationPath(String authenticationPath) {
-            this.authenticationPath = authenticationPath;
-        }
     }
 }

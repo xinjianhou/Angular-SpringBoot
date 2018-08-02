@@ -49,6 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .requestMatchers(EndpointRequest.to("health", "info")).permitAll()
                 .antMatchers(config.getJwt().getAuthenticationPath()).permitAll()
                 .antMatchers("/user/createUser").permitAll()
+                .antMatchers("/video/**").permitAll()
                 .antMatchers(OPTIONS, "/**").permitAll()
                 .anyRequest().authenticated().and()
                 .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class) // Custom JWT based security filter

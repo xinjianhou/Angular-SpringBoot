@@ -17,7 +17,7 @@ export class WelcomeComponent implements OnInit {
 
   homeForm: FormGroup;
 
-  videoSource: string;
+  videoSource = 'http://localhost:8888/video/home';
 
   @ViewChild('videoPlayer') videoPlayer: ElementRef;
 
@@ -37,17 +37,18 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
     this.buildForm();
     this.f.searchDate.setValue(DateUtil.formatDate());
-    this.videoSevice.getVideo('home').subscribe(res => {
-      // this.videoPlayer.nativeElement.srcObject = res;
-      // const fileReader = new FileReader();
-      //
-      // fileReader.readAsDataURL(res);
-
-      const objURL = URL.createObjectURL(res);
-      console.log(objURL);
-
-      this.videoSource = objURL;
-    });
+    // this.videoSevice.searchVideo('home').subscribe(res => {
+    //   // this.videoPlayer.nativeElement.srcObject = res;
+    //   // const fileReader = new FileReader();
+    //   //
+    //   // fileReader.readAsDataURL(res);
+    //
+    //   const objURL = URL.createObjectURL(res);
+    //   console.log(objURL);
+    //   console.log(res.token);
+    //
+    //   this.videoSource = res.token;
+    // });
   }
 
   onSubmit(): void {
