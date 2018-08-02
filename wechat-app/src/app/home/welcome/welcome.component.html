@@ -1,4 +1,4 @@
-<div class="form">
+<div class="form pb-5 pt-5">
   <form class="login-form" [formGroup]="homeForm" (ngSubmit)="onSubmit()">
     <div kendoWindowContainer></div>
     <div class="jumbotron">
@@ -15,7 +15,7 @@
       <div class="container">
         <div class="video">
           <video controls height="300" (click)="toggleVideo()" #videoPlayer>
-            <source src="{{videoSource}}" type="video/webm" />
+            <source src="{{videoSource}}" type="video/mp4" />
             Browser not supported
           </video>
         </div>

@@ -10,12 +10,22 @@ import {StorageService} from '../_services';
 export class HomeComponent implements OnInit {
 
   auth: Authentication;
+  currentPage: string;
 
   constructor(private storage: StorageService) {
   }
 
   ngOnInit() {
     this.auth = this.storage.getAuth();
+    this.currentPage = 'home';
+  }
+
+  changePage(page: string): void {
+    if (page === this.currentPage) {
+      return;
+    } else {
+      this.currentPage = page;
+    }
   }
 
 }

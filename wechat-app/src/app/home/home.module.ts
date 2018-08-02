@@ -7,6 +7,7 @@ import {WindowComponent} from '../window';
 import {WelcomeComponent} from './welcome';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {HomeRoutingModule} from './home-routing.module';
+import { LinkComponent } from './link/link.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import {HomeRoutingModule} from './home-routing.module';
     HomeComponent,
     WindowComponent,
     WelcomeComponent,
+    LinkComponent,
 
   ],
 })
