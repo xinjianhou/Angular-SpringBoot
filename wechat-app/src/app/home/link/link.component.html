@@ -1,5 +1,14 @@
 <div class="form pb-5 pt-5">
-
-  
-
+  <form formGroup]="linkForm" (ngSubmit)="onSubmit()">
+    <div class="input-group " style="width: 20%">
+      <input class="form-control" placeholder="dd/MM/yyyy" ngbTooltip="{{f.searchDate.length}}"
+             name="dp" formControlName="searchDate" ngbDatepicker #d="ngbDatepicker"
+             [ngClass]="{ 'is-invalid': f.searchDate.invalid}">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+          <img src="../../../assets/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
