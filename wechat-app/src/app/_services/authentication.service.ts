@@ -47,7 +47,7 @@ export class AuthenticationService {
   }
 
   getToken(): String {
-    return this.storage.getAuth().token;
+    return this.storage.getAuth() ? this.storage.getAuth().token : null;
   }
 
   logout(): void {

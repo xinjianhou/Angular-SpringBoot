@@ -8,6 +8,7 @@ export const environment = {
   user: '/user',
   auth: '/auth',
   video: '/video',
+  file: '/file',
   expiration: 2 * 60 * 60,
 };
 

@@ -1,11 +1,11 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {UserService, VideoService} from '../../_services';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {NgbDatepickerConfig} from '@ng-bootstrap/ng-bootstrap';
-import {DateUtil} from '../../_utils';
-import {WindowService} from '@progress/kendo-angular-dialog';
-import {WindowComponent} from '../../window';
-import {DomSanitizer} from '@angular/platform-browser';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AuthenticationService, VideoService } from '../../_services';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgbDatepickerConfig } from '@ng-bootstrap/ng-bootstrap';
+import { DateUtil } from '../../_utils';
+import { WindowService } from '@progress/kendo-angular-dialog';
+import { WindowComponent } from '../../window';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-welcome',
@@ -15,18 +15,18 @@ import {DomSanitizer} from '@angular/platform-browser';
 })
 export class WelcomeComponent implements OnInit {
 
-  homeForm: FormGroup;
+  welcomeForm: FormGroup;
 
-  videoSource = 'http://localhost:8888/video/home';
+  videoSource: any;
+
 
   @ViewChild('videoPlayer') videoPlayer: ElementRef;
 
   toggleVideo() {
-
     this.videoPlayer.nativeElement.paused ? this.videoPlayer.nativeElement.pause() : this.videoPlayer.nativeElement.play();
   }
 
-  constructor(private userService: UserService, private formBuilder: FormBuilder, config: NgbDatepickerConfig,
+  constructor(private formBuilder: FormBuilder, config: NgbDatepickerConfig,
               private windowService: WindowService, private videoSevice: VideoService, private sanitizer: DomSanitizer) {
     config.maxDate = DateUtil.formatDate(new Date(1990, 1, 1));
     config.maxDate = DateUtil.formatDate(new Date(2099, 11, 31));
@@ -37,18 +37,10 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
     this.buildForm();
     this.f.searchDate.setValue(DateUtil.formatDate());
-    // this.videoSevice.searchVideo('home').subscribe(res => {
-    //   // this.videoPlayer.nativeElement.srcObject = res;
-    //   // const fileReader = new FileReader();
-    //   //
-    //   // fileReader.readAsDataURL(res);
-    //
-    //   const objURL = URL.createObjectURL(res);
-    //   console.log(objURL);
-    //   console.log(res.token);
-    //
-    //   this.videoSource = res.token;
-    // });
+    this.videoSevice.getVideo('/home').subscribe(res => {
+      const objURL = URL.createObjectURL(res);
+      this.videoSource = this.sanitizer.bypassSecurityTrustResourceUrl(objURL);
+    });
   }
 
   onSubmit(): void {
@@ -58,11 +50,11 @@ export class WelcomeComponent implements OnInit {
   }
 
   get f() {
-    return this.homeForm.controls;
+    return this.welcomeForm.controls;
   }
 
   buildForm(): void {
-    this.homeForm = this.formBuilder.group({
+    this.welcomeForm = this.formBuilder.group({
         searchDate: ['', [Validators.required]]
 
       }
@@ -81,8 +73,7 @@ export class WelcomeComponent implements OnInit {
         draggable: true,
         resizable: true
 
-      })
-    ;
+      });
 
     const userInfo = windowRef.content.instance;
     userInfo.name = 'admin';

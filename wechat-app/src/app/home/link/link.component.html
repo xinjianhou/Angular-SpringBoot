@@ -1,7 +1,7 @@
 <div class="form pb-5 pt-5">
-  <form formGroup]="linkForm" (ngSubmit)="onSubmit()">
-    <div class="input-group " style="width: 20%">
-      <input class="form-control" placeholder="dd/MM/yyyy" ngbTooltip="{{f.searchDate.length}}"
+  <form [formGroup]="linkForm" (ngSubmit)="onSubmit()">
+    <div class="input-group pt-4 " style="width: 20%">
+      <input class="form-control" placeholder="dd/MM/yyyy" ngbTooltip="dd/MM/yyyy"
              name="dp" formControlName="searchDate" ngbDatepicker #d="ngbDatepicker"
              [ngClass]="{ 'is-invalid': f.searchDate.invalid}">
       <div class="input-group-append">
@@ -10,5 +10,25 @@
         </button>
       </div>
     </div>
+    <div class="info">
+      <div *ngIf="currentFileUpload" class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+             aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+          {{progress.percentage}}%</div>
+      </div>
+
+      <label class="btn btn-default">
+        <input type="file" (change)="selectFile($event)">
+      </label>
+
+      <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+
+    </div>
+    <div class="Block">
+      <label id="lbl">File </label>
+      <input type='file' (change)="uploadDocument($event)">
+    </div>
+
+
   </form>
 </div>

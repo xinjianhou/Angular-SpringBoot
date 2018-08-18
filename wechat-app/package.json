@@ -29,12 +29,15 @@
     "@progress/kendo-theme-bootstrap": "^2.13.7",
     "core-js": "^2.5.4",
     "hoek": "^5.0.3",
+    "ionicons-npm": "^2.0.1",
     "jquery-ui": "^1.12.1",
     "moment": "^2.22.2",
     "ngx-popper": "^4.0.1",
     "open-iconic": "^1.1.1",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.2.2",
+    "string-format": "^2.0.0",
+    "truly-ui": "^3.0.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

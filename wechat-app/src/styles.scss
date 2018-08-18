@@ -1,16 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file; and also import other style files */
 
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 // 定义图标路径
-$fa-font-path: "../node_modules/font-awesome/fonts";
-@import "../node_modules/font-awesome/scss/font-awesome.scss";
+$fa-font-path: '../node_modules/font-awesome/fonts';
+@import '../node_modules/font-awesome/scss/font-awesome.scss';
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 @import '~open-iconic/font/css/open-iconic-bootstrap.css';
 
-@import "../node_modules/@progress/kendo-theme-bootstrap/dist/all.css";
+@import '../node_modules/@progress/kendo-theme-bootstrap/dist/all.css';
 
+@import '../node_modules/@angular/cdk/overlay-prebuilt.css';
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+@import '../node_modules/ionicons-npm/css/ionicons.min.css';
 
 .k-window-titlebar{
   background-color: #76b852;

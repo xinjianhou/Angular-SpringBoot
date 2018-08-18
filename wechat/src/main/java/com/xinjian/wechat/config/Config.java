@@ -1,9 +1,12 @@
 package com.xinjian.wechat.config;
 
 import lombok.Data;
+import org.springframework.boot.web.servlet.MultipartConfigFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+import javax.servlet.MultipartConfigElement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,4 +44,5 @@ public class Config {
         private String authenticationPath;
 
     }
+
 }

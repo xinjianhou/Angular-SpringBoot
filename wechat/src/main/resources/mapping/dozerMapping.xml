@@ -7,8 +7,20 @@
         <class-a map-null="false">com.xinjian.wechat.vo.UserVo</class-a>
         <class-b map-null="false">com.xinjian.wechat.domain.User</class-b>
         <!--<field>-->
-            <!--<a>teacher.name</a>-->
-            <!--<b>teacherName</b>-->
+        <!--<a>teacher.name</a>-->
+        <!--<b>teacherName</b>-->
         <!--</field>-->
+    </mapping>
+    <mapping>
+        <class-a map-null="false">org.springframework.web.multipart.MultipartFile</class-a>
+        <class-b map-null="false">com.xinjian.wechat.domain.File</class-b>
+        <field>
+            <a>name</a>
+            <b>fileName</b>
+        </field>
+        <field>
+            <a>size</a>
+            <b>fileSize</b>
+        </field>
     </mapping>
 </mappings>

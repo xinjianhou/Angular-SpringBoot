@@ -14,3 +14,4 @@ public class WechatApplication {
 		SpringApplication.run(WechatApplication.class, args);
 	}
 }
+

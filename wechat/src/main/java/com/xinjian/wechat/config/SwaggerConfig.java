@@ -1,5 +1,6 @@
 package com.xinjian.wechat.config;
 
+import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import javax.servlet.MultipartConfigElement;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -63,5 +65,16 @@ public class SwaggerConfig {
         AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
         authorizationScopes[0] = authorizationScope;
         return newArrayList(new SecurityReference("BearerToken", authorizationScopes));
+    }
+
+    // for file upload
+    @Bean
+    public MultipartConfigElement multipartConfigElement() {
+        MultipartConfigFactory factory = new MultipartConfigFactory();
+        //单个文件最大
+        factory.setMaxFileSize("1024000KB"); //KB,MB
+        /// 设置总上传数据总大小
+        factory.setMaxRequestSize("10240000KB");
+        return factory.createMultipartConfig();
     }
 }
