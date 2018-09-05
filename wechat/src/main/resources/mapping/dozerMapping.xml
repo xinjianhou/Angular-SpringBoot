@@ -15,7 +15,7 @@
         <class-a map-null="false">org.springframework.web.multipart.MultipartFile</class-a>
         <class-b map-null="false">com.xinjian.wechat.domain.File</class-b>
         <field>
-            <a>name</a>
+            <a>fileName</a>
             <b>fileName</b>
         </field>
         <field>

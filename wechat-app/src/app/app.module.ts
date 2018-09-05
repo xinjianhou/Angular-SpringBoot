@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { NgxPopperModule } from 'ngx-popper';
-import { NgbModule, } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbModule, } from '@ng-bootstrap/ng-bootstrap';
 import { AuthenticationService, UserService, StorageService, VideoService } from './_services';
 import { AuthenticationInterceptor } from './_interceptor/authentication.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertComponent } from './alert/alert.component';
 import { HomeModule } from './home';
+import { BsModalService, ComponentLoaderFactory, ModalBackdropComponent, PositioningService } from 'ngx-bootstrap';
+import { ModalContainerComponent } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { HomeModule } from './home';
     LoginComponent,
     RegisterComponent,
     AlertComponent,
+    ModalContainerComponent,
+    ModalBackdropComponent,
   ],
   imports: [
     NgbModule.forRoot(),
@@ -33,13 +37,17 @@ import { HomeModule } from './home';
     HttpClientModule,
     HomeModule,
   ],
-  entryComponents: [AlertComponent],
+  entryComponents: [AlertComponent, ModalContainerComponent, ModalBackdropComponent],
   providers: [
     UserService,
     AuthenticationService,
     NgbModal,
     StorageService,
     VideoService,
+    BsModalService,
+    ComponentLoaderFactory,
+    PositioningService,
+    NgbActiveModal,
     [{provide: HTTP_INTERCEPTORS, useClass: AuthenticationInterceptor, multi: true}],
   ],
   bootstrap: [AppComponent]

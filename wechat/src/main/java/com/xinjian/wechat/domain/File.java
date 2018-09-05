@@ -1,10 +1,12 @@
 package com.xinjian.wechat.domain;
 
 import lombok.Data;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.Date;
 
 @Data
 @Entity
@@ -28,5 +30,10 @@ public class File implements Serializable {
     @Column(name="LOCATION", length=100)
     @NotNull
     private String location;
+
+    @Column(name="UPLOAD_DATE")
+    @NotNull
+    @CreatedDate
+    private Date uploadDate;
 
 }

@@ -1,12 +1,13 @@
 package com.xinjian.wechat.controller;
 
+import com.xinjian.wechat.domain.File;
 import com.xinjian.wechat.service.FileService;
-import org.dozer.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import static sun.misc.Version.print;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/file")
@@ -15,19 +16,31 @@ public class FileController {
     @Autowired
     private FileService fileService;
 
-//    @Mapping(value = "/download")
-//    public FileSystemResource downloadFile(@RequestBody long id) {
-//
-//
-//    }
-
-    @PostMapping(value = "/upload")
-    public String uploadFile(@RequestParam("file") MultipartFile file) {
-
-         fileService.saveFile(file);
-         return "ok";
+    @PostMapping(value = "/download")
+    public FileSystemResource downloadFile(@RequestBody long id) {
+    File file = fileService.getFileById(id);
+    return new FileSystemResource(new java.io.File(file.getLocation()+file.getFileName()));
 
     }
+
+    @GetMapping(value = "/getFiles")
+    public List<File> getFileList(){
+        return fileService.getFileList();
+    }
+
+    @PostMapping(value = "/upload")
+    public boolean uploadFile(@RequestParam("file") MultipartFile file) {
+        return fileService.saveFile(file);
+    }
+
+    @PostMapping(value="/delete")
+    public boolean delete(@RequestBody File file){
+     return fileService.deleteFile(file);
+
+
+
+    }
+
 
 
 }

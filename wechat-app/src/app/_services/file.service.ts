@@ -1,10 +1,11 @@
-import {Injectable} from '@angular/core';
-import {HttpClient, HttpEvent, HttpHeaders, HttpRequest} from '@angular/common/http';
-import {environment} from '../../environments/environment';
-import {Observable} from 'rxjs';
-import {catchError, tap} from 'rxjs/operators';
-import {ErrorUtil} from '../_utils';
-import {Authentication} from '../_models';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpEvent, HttpHeaders, HttpRequest } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
+import { ErrorUtil } from '../_utils';
+import { Authentication } from '../_models';
+import { UploadedFile } from '../_models/uploadedFile';
 
 
 const httpOptions = {
@@ -41,7 +42,21 @@ export class FileService {
       tap(res => {
         return res;
       }),
-      catchError(ErrorUtil.handleError<Authentication>(`search video ${name}`))
+      catchError(ErrorUtil.handleError<any>(`get all files`))
     );
   }
+
+  async downloadFile(id: number): Promise<Blob> {
+    const file = await this.http.post<Blob>(
+      this.url + '/download', id,
+      {responseType: 'blob' as 'json'}).toPromise();
+    return file;
+  }
+
+  deleteFile(file: UploadedFile): Observable<boolean> {
+    return this.http.post(this.url + '/delete', file, httpOptions).pipe(tap(res => {
+      return res;
+    }), catchError(ErrorUtil.handleError<any>(`delete file ${file.fileName}`)));
+  }
+
 }

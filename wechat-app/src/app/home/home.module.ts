@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeRoutingModule } from './home-routing.module';
 import { LinkComponent } from './link/link.component';
 import { ButtonModule, CoreModule, InputModule } from 'truly-ui';
+import { AlertComponent } from '../alert/alert.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { ButtonModule, CoreModule, InputModule } from 'truly-ui';
   entryComponents: [
     WindowComponent,
     WelcomeComponent,
+    AlertComponent,
   ],
   declarations: [
     HomeComponent,

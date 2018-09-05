@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Authentication } from '../_models';
 import { StorageService } from '../_services';
+import { WelcomeComponent } from './welcome';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,9 @@ export class HomeComponent implements OnInit {
 
   auth: Authentication;
   currentPage: string;
+
+  @ViewChild(WelcomeComponent)
+  welcomePage!: WelcomeComponent;
 
   constructor(private storage: StorageService) {
   }
@@ -25,6 +29,7 @@ export class HomeComponent implements OnInit {
       return;
     } else {
       this.currentPage = page;
+
     }
   }
 

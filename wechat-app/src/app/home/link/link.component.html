@@ -1,34 +1,59 @@
 <div class="form pb-5 pt-5">
   <form [formGroup]="linkForm" (ngSubmit)="onSubmit()">
-    <div class="input-group pt-4 " style="width: 20%">
-      <input class="form-control" placeholder="dd/MM/yyyy" ngbTooltip="dd/MM/yyyy"
-             name="dp" formControlName="searchDate" ngbDatepicker #d="ngbDatepicker"
-             [ngClass]="{ 'is-invalid': f.searchDate.invalid}">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
-          <img src="../../../assets/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
-        </button>
+    <div class="container">
+      <div class="row  pt-4">
+        <div  class="input-group" style="width: 20%">
+          <input class="form-control" placeholder="dd/MM/yyyy" ngbTooltip="dd/MM/yyyy"
+                 name="dp" formControlName="searchDate" ngbDatepicker #d="ngbDatepicker"
+                 [ngClass]="{ 'is-invalid': f.searchDate.invalid}">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+              <img src="../../../assets/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+            </button>
+          </div>
+        </div>
+        <div class="info">
+          <div *ngIf="currentFileUpload" class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                 attr.aria-valuenow="{{progress.percentage}}"
+                 aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+              {{progress.percentage}}%
+            </div>
+          </div>
+
+          <label class="btn btn-default">
+            <input type="file" (change)="selectFile($event)">
+          </label>
+
+          <button *ngIf="isLoggedIn" class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+
+        </div>
       </div>
-    </div>
-    <div class="info">
-      <div *ngIf="currentFileUpload" class="progress">
-        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
-             aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
-          {{progress.percentage}}%</div>
+      <div class="tab-pane pt-5"></div>
+      <div class="container">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>No.</th>
+            <th>File Name</th>
+            <th>Size</th>
+            <th>Load Date</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody *ngIf="isLoggedIn">
+          <tr *ngFor="let file of files, let i = index;">
+            <td>{{i+1}}</td>
+            <td>{{file.fileName}}</td>
+            <td>{{file.fileSize}}</td>
+            <td>{{file.uploadDate}}</td>
+            <td><i class="fa fa-download hand" aria-hidden="true" placement="bottom" triggers="hover" ngbTooltip="Download"  (click)="download(file)"></i><a #downloadFileLink></a>
+              / <i class="fa fa-trash hand" aria-hidden="true" placement="bottom" triggers="hover" ngbTooltip="Delete" (click)="delete(file)"></i></td>
+          </tr>
+          </tbody>
+        </table>
       </div>
-
-      <label class="btn btn-default">
-        <input type="file" (change)="selectFile($event)">
-      </label>
-
-      <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
-
+      <div><button class="btn btn-primary" (click)="openAlert()">alert</button></div>
     </div>
-    <div class="Block">
-      <label id="lbl">File </label>
-      <input type='file' (change)="uploadDocument($event)">
-    </div>
-
-
   </form>
 </div>

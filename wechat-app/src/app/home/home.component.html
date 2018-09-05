@@ -7,7 +7,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item" [ngClass]="currentPage === 'home'?'active':'hand'" >
+        <li class="nav-item" [ngClass]="currentPage === 'home'?'active':'hand'">
           <a class="nav-link" (click)="changePage('home')">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item" [ngClass]="currentPage === 'link'?'active':'hand'">
@@ -50,6 +50,6 @@
     </div>
   </nav>
   <router-outlet></router-outlet>
-  <app-welcome *ngIf=" currentPage ==='home' "></app-welcome>
-  <app-link *ngIf=" currentPage === 'link' "></app-link>
+  <app-welcome *ngIf=" currentPage ==='home' " [isLoggedIn]="auth ? true : false"></app-welcome>
+  <app-link *ngIf=" currentPage === 'link' " [isLoggedIn]="auth ? true : false"></app-link>
 </div>

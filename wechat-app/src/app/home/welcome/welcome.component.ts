@@ -1,5 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { AuthenticationService, VideoService } from '../../_services';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { VideoService } from '../../_services';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbDatepickerConfig } from '@ng-bootstrap/ng-bootstrap';
 import { DateUtil } from '../../_utils';
@@ -19,6 +19,8 @@ export class WelcomeComponent implements OnInit {
 
   videoSource: any;
 
+  @Input() isLoggedIn: boolean;
+
 
   @ViewChild('videoPlayer') videoPlayer: ElementRef;
 
@@ -37,6 +39,13 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
     this.buildForm();
     this.f.searchDate.setValue(DateUtil.formatDate());
+    this.videoSource = '';
+    if (this.isLoggedIn) {
+      this.loadVideo();
+    }
+  }
+
+  loadVideo(): void {
     this.videoSevice.getVideo('/home').subscribe(res => {
       const objURL = URL.createObjectURL(res);
       this.videoSource = this.sanitizer.bypassSecurityTrustResourceUrl(objURL);
@@ -63,17 +72,17 @@ export class WelcomeComponent implements OnInit {
 
   public showWindow() {
     const windowRef = this.windowService.open({
-        title: 'Success!',
-        content: WindowComponent,
-        keepContent: false,
-        width: 800,
-        height: 650,
-        minWidth: 500,
-        minHeight: 300,
-        draggable: true,
-        resizable: true
+      title: 'Success!',
+      content: WindowComponent,
+      keepContent: false,
+      width: 800,
+      height: 650,
+      minWidth: 500,
+      minHeight: 300,
+      draggable: true,
+      resizable: true
 
-      });
+    });
 
     const userInfo = windowRef.content.instance;
     userInfo.name = 'admin';
