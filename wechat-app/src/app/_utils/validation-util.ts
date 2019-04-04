@@ -4,14 +4,14 @@ export class ValidationUtil {
 
   static onValueChanged(form: FormGroup, formErrors: any, validationMessage: any, data?: any): void {
 
-    for (const field in formErrors) {
+    for (const field of Object.keys(formErrors)) {
 
       formErrors[field] = '';
       const control = form.get(field);
 
-      if (control && control.dirty && control.invalid) {
+      if (control && (control.dirty || !data) && control.invalid) {
         const messages = validationMessage[field];
-        for (const key in control.errors) {
+        for (const key of Object.keys(control.errors)) {
           formErrors[field] += messages[key];
         }
       }

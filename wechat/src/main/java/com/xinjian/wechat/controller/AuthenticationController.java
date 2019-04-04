@@ -1,11 +1,11 @@
-package com.freshman.controller;
+package com.xinjian.wechat.controller;
 
-import com.freshman.domain.User;
-import com.freshman.util.JwtTokenUtil;
-import com.freshman.vo.AuthenticationRequest;
-import com.freshman.exception.ErrorMessage;
-import com.freshman.service.UserDetailsServiceImpl;
-import com.freshman.vo.AuthenticationResponse;
+import com.xinjian.wechat.domain.User;
+import com.xinjian.wechat.exception.ErrorMessage;
+import com.xinjian.wechat.service.UserDetailsServiceImpl;
+import com.xinjian.wechat.util.JwtTokenUtil;
+import com.xinjian.wechat.vo.AuthenticationRequest;
+import com.xinjian.wechat.vo.AuthenticationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
@@ -18,6 +18,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping(value = "${api.base-path}/auth", produces = MediaType.APPLICATION_JSON_VALUE)

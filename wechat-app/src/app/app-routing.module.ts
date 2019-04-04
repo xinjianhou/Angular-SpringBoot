@@ -2,16 +2,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
-import { HomeComponent } from './home';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '', redirectTo: 'home/welcome', pathMatch: 'full'},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'home', component: HomeComponent},
+  {path: 'welcome', redirectTo: 'home/welcome'},
   // otherwise redirect to home
-  {path: '**', redirectTo: 'home'},
+  {path: '**', redirectTo: 'home/welcome'},
 
 ];
 

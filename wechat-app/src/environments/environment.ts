@@ -4,11 +4,12 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8888',
+  apiUrl: 'http://localhost:8888/WeChat',
   user: '/user',
   auth: '/auth',
   video: '/video',
   file: '/file',
+  todo: '/todo',
   expiration: 2 * 60 * 60,
 };
 

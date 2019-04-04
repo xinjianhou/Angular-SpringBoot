@@ -1,6 +1,5 @@
-export class Authentication {
+export class AuthenticationModel {
   username: string;
-  loginTime: number;
   token: string;
 
   constructor(

@@ -1,7 +1,7 @@
-package com.freshman.filter;
+package com.xinjian.wechat.filter;
 
-import com.freshman.config.Config;
-import com.freshman.util.JwtTokenUtil;
+import com.xinjian.wechat.config.Config;
+import com.xinjian.wechat.util.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;

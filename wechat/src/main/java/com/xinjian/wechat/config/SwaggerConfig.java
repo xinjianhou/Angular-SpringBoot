@@ -1,4 +1,4 @@
-package com.freshman.config;
+package com.xinjian.wechat.config;
 
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;

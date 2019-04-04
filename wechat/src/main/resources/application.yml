@@ -28,6 +28,8 @@ spring:
     add-mappings: true
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
+    ##懒加载
+    open-in-view: true
 
 # 日志级别从低到高分为TRACE < DEBUG < INFO < WARN < ERROR < FATAL，如果设置为WARN，则低于WARN的信息都不会输出
 logging:
@@ -62,7 +64,7 @@ jwt:
   secret: mySecret
   expiration: 7200
   issuer: ITRunner
-  authenticationPath: /auth/**
+  authenticationPath: /WeChat/auth/**
 
 info:
   app:
@@ -112,10 +114,13 @@ server:
 #    keyAlias: tomcatssl
 
 ---
+# active witch evn
 spring:
   profiles:
     active: dev
 
+api:
+  base-path: /WeChat
 
 springfox:
   documentation:

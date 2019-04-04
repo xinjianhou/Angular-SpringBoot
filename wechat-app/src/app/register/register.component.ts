@@ -1,12 +1,11 @@
-import {Component, OnInit, ViewChildren} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {NgbTooltipConfig} from '@ng-bootstrap/ng-bootstrap';
-import {Dictionary, ValidationUtil} from '../_utils';
-import {AuthenticationService, UserService} from '../_services';
-import {User} from '../_models';
-import {Router} from '@angular/router';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import {AlertComponent} from '../alert/alert.component';
+import { Component, Inject, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
+import { Dictionary, ValidationUtil } from '../_utils';
+import { UserModel } from '../_models';
+import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AlertComponent } from '../alert/alert.component';
 
 @Component({
   selector: 'app-register',
@@ -19,8 +18,8 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   errorMessage: string;
 
-  constructor(private router: Router, private formBuilder: FormBuilder, private userService: UserService,
-              private authenticationService: AuthenticationService, /* config: NgbTooltipConfig */private modalService: NgbModal) {
+  constructor(private router: Router, private formBuilder: FormBuilder, @Inject('userService') private userService,
+              @Inject('authService') private authenticationService, /* config: NgbTooltipConfig */private modalService: NgbModal) {
     // config.placement = 'bottom';
     //  config.triggers = 'input:hover';
   }
@@ -66,7 +65,7 @@ export class RegisterComponent implements OnInit {
       return;
     }
     this.loading = true;
-    this.userService.register(new User(this.f.username.value, this.f.password.value, this.f.email.value)).subscribe(
+    this.userService.register(new UserModel(this.f.username.value, this.f.password.value, this.f.email.value)).subscribe(
       result => {
         if (result) {
           this.openAlert('Register Success', `please open <a>${this.f.email.value}</a> and click the link to active your account.`);

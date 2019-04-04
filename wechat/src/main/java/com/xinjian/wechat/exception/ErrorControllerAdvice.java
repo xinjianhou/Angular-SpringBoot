@@ -1,4 +1,4 @@
-package com.freshman.exception;
+package com.xinjian.wechat.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

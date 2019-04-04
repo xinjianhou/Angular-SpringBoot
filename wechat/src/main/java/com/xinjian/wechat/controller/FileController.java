@@ -4,13 +4,14 @@ import com.xinjian.wechat.domain.File;
 import com.xinjian.wechat.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "${api.base-path}/file")
+@RequestMapping(value = "${api.base-path}/file", produces = MediaType.APPLICATION_JSON_VALUE)
 public class FileController {
 
     @Autowired

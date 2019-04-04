@@ -1,4 +1,4 @@
-import {Authentication} from '../_models/index';
+import {AuthenticationModel} from '../_models/index';
 import {environment} from '../../environments/environment';
 
 export class StorageService {
@@ -11,8 +11,7 @@ export class StorageService {
     this.time = environment.expiration;
   }
 
-  putAuth(auth: Authentication): boolean {
-    auth.loginTime = new Date().getTime();
+  putAuth(auth: AuthenticationModel): boolean {
     this.storage.setItem('auth', JSON.stringify(auth));
     if (this.storage.getItem('auth')) {
       return true;
@@ -21,16 +20,16 @@ export class StorageService {
     }
   }
 
-  getAuth(): Authentication {
-    let auth: Authentication;
-    const newTime = new Date().getTime();
+  getAuth(): AuthenticationModel {
+    let auth: AuthenticationModel;
+    // const newTime = new Date().getTime();
     if (this.storage.getItem('auth')) {
       auth = JSON.parse(this.storage.getItem('auth'));
-      if (newTime < (auth.loginTime + this.time * 1000)) {
-        return auth;
-      }
+      // if (newTime < (auth.loginTime + this.time * 1000)) {
+      //   return auth;
+      // }
     }
-    return null;
+    return auth;
   }
 
   removeAuth(): void {

@@ -1,11 +1,11 @@
-import {Injectable} from '@angular/core';
-import {environment} from '../../environments/environment';
-import {Authentication, User} from '../_models';
-import {catchError, tap} from 'rxjs/operators';
-import {Observable} from 'rxjs';
-import {ErrorUtil} from '../_utils';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {StorageService} from './storage.service';
+import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
+import { AuthenticationModel, UserModel } from '../_models';
+import { catchError, tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { ErrorUtil } from '../_utils';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { StorageService } from './storage.service';
 
 
 const httpOptions = {
@@ -23,26 +23,26 @@ export class AuthenticationService {
     this.url = environment.apiUrl + environment.auth;
   }
 
-  checkByUsername(username: string): Observable<User> {
+  checkByUsername(username: string): Observable<UserModel> {
 
-    return this.http.post<any>(this.url + '/checkUserByUsername', JSON.stringify({username: username}), httpOptions).pipe(
+    return this.http.post<any>(this.url + '/checkUserByUsername', JSON.stringify({'username': username}), httpOptions).pipe(
       tap(_ => console.log(`fetched User username=${username}`)),
-      catchError(ErrorUtil.handleError<User>(`checkByUsername username=${username}`))
+      catchError(ErrorUtil.handleError<UserModel>(`checkByUsername username=${username}`))
     );
 
   }
 
-  login(user: User): Observable<boolean> {
+  login(user: UserModel): Observable<boolean> {
     return this.http.post<any>(this.url + '/login', JSON.stringify(user), httpOptions).pipe(
       tap(response => {
         if (response) {
           // store username and jwt token in local storage to keep user logged in between page refreshes
           return this.storage.putAuth(response);
-        } else{
+        } else {
           return false;
         }
       }),
-      catchError(ErrorUtil.handleError<Authentication>(`login username=${user.username}, password=${user.password}`))
+      catchError(ErrorUtil.handleError<AuthenticationModel>(`login username=${user.username}, password=${user.password}`))
     );
   }
 

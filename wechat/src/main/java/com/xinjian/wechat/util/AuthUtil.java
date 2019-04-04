@@ -1,6 +1,6 @@
-package com.freshman.util;
+package com.xinjian.wechat.util;
 
-import com.freshman.domain.Authority;
+import com.xinjian.wechat.domain.Authority;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

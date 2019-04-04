@@ -4,8 +4,7 @@ import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { ErrorUtil } from '../_utils';
-import { Authentication } from '../_models';
-import { UploadedFile } from '../_models/uploadedFile';
+import { UploadedFileModel } from '../_models/uploadedFile.model';
 
 
 const httpOptions = {
@@ -53,7 +52,7 @@ export class FileService {
     return file;
   }
 
-  deleteFile(file: UploadedFile): Observable<boolean> {
+  deleteFile(file: UploadedFileModel): Observable<boolean> {
     return this.http.post(this.url + '/delete', file, httpOptions).pipe(tap(res => {
       return res;
     }), catchError(ErrorUtil.handleError<any>(`delete file ${file.fileName}`)));

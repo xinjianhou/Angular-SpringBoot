@@ -1,6 +1,7 @@
-package com.freshman.controller;
+package com.xinjian.wechat.controller;
 
-import com.freshman.vo.TodoVo;
+import com.xinjian.wechat.vo.TodoVo;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping(value = "${api.base-path}/todo")
+@RequestMapping(value = "${api.base-path}/todo", produces = MediaType.APPLICATION_JSON_VALUE)
 public class TodoController {
 
     private static List<TodoVo> todos = new ArrayList();
@@ -67,13 +68,13 @@ public class TodoController {
 
     @DeleteMapping(value = "/completed")
     public List<TodoVo> deleteCompleted() {
-         todos= todos.stream().filter(todo -> {
+        todos = todos.stream().filter(todo -> {
             if (todo.getCompleted())
                 return false;
             return true;
         }).collect(Collectors.toList());
 
-         return todos;
+        return todos;
 
     }
 }

@@ -1,10 +1,10 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NgbDatepickerConfig } from '@ng-bootstrap/ng-bootstrap';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgbDatepickerConfig, NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 import { DateUtil } from '../../_utils';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
-import { FileService } from '../../_services';
-import { UploadedFile } from '../../_models';
+import { FileService, TooltipService } from '../../_services';
+import { UploadedFileModel } from '../../_models';
 import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap';
 import { AlertComponent } from '../../alert/alert.component';
 
@@ -22,7 +22,7 @@ export class LinkComponent implements OnInit {
 
   file: File;
 
-  files: UploadedFile[];
+  files: UploadedFileModel[];
 
   bsModalRef: BsModalRef;
 
@@ -39,7 +39,7 @@ export class LinkComponent implements OnInit {
   }
 
   constructor(private formBuilder: FormBuilder, config: NgbDatepickerConfig,
-              private fileService: FileService, private modalService: BsModalService) {
+              private fileService: FileService, private modalService: BsModalService, private tooltipService: TooltipService) {
     config.maxDate = DateUtil.formatDate(new Date(1990, 1, 1));
     config.maxDate = DateUtil.formatDate(new Date(2099, 11, 31));
     config.outsideDays = 'collapsed';
@@ -106,7 +106,7 @@ export class LinkComponent implements OnInit {
     );
   }
 
-  async download(file: UploadedFile): Promise<void> {
+  async download(file: UploadedFileModel): Promise<void> {
     const blob = await this.fileService.downloadFile(file.id);
     const url = window.URL.createObjectURL(blob);
 
@@ -118,7 +118,7 @@ export class LinkComponent implements OnInit {
     window.URL.revokeObjectURL(url);
   }
 
-  delete(file: UploadedFile): void {
+  delete(file: UploadedFileModel): void {
     this.fileService.deleteFile(file).subscribe(
       res => {
         this.getFileList();
@@ -133,6 +133,17 @@ export class LinkComponent implements OnInit {
     this.bsModalRef = this.modalService.show(AlertComponent, this.modelConf);
     this.bsModalRef.content = 'a';
 
+  }
+
+  openTooltip(control: AbstractControl, value: any, tooltip: NgbTooltip, noTouched: boolean): void {
+
+    if (!control.valid && (control.touched || noTouched)) {
+      this.tooltipService.openToolTip(control, value, tooltip, noTouched);
+    }
+  }
+
+  closeTooltips(...tooltips: NgbTooltip[]): void {
+    this.tooltipService.closeTooltips(...tooltips);
   }
 
 }

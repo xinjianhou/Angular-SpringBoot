@@ -1,4 +1,4 @@
-package com.freshman.validation;
+package com.xinjian.wechat.validation;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

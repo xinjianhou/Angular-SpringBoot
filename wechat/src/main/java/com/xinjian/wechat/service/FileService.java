@@ -1,7 +1,7 @@
-package com.freshman.service;
+package com.xinjian.wechat.service;
 
-import com.freshman.domain.File;
-import com.freshman.repository.FileRepository;
+import com.xinjian.wechat.domain.File;
+import com.xinjian.wechat.repository.FileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

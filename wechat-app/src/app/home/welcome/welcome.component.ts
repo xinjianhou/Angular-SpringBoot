@@ -38,7 +38,7 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit() {
     this.buildForm();
-    this.f.searchDate.setValue(DateUtil.formatDate());
+    // this.f.searchDate.setValue(DateUtil.formatDate());
     this.videoSource = '';
     if (this.isLoggedIn) {
       this.loadVideo();

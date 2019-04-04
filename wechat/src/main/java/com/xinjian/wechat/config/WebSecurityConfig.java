@@ -1,6 +1,7 @@
-package com.freshman.config;
+package com.xinjian.wechat.config;
 
-import com.freshman.filter.AuthenticationTokenFilter;
+import com.xinjian.wechat.config.Config.Cors;
+import com.xinjian.wechat.filter.AuthenticationTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;
@@ -47,6 +48,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .requestMatchers(EndpointRequest.to("health", "info")).permitAll()
                 .antMatchers(config.getJwt().getAuthenticationPath()).permitAll()
+                .antMatchers("**").permitAll()
                 .antMatchers(OPTIONS, "/**").permitAll()
                 .anyRequest().authenticated().and()
                 .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class) // Custom JWT based security filter
@@ -72,7 +74,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        Config.Cors cors = config.getCors();
+        Cors cors = config.getCors();
         configuration.setAllowedOrigins(cors.getAllowedOrigins());
         configuration.setAllowedMethods(cors.getAllowedMethods());
         configuration.setAllowedHeaders(cors.getAllowedHeaders());

@@ -7,11 +7,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item" [ngClass]="currentPage === 'home'?'active':'hand'">
-          <a class="nav-link" (click)="changePage('home')">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item" [ngClass]="currentPage === 'welcome'?'active':'hand'">
+          <a class="nav-link" routerLink="home/welcome" (click)="changePage('welcome')">Welcome <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item" [ngClass]="currentPage === 'link'?'active':'hand'">
-          <a class="nav-link" (click)="changePage('link')">Link</a>
+          <a class="nav-link" routerLink="home/link" (click)="changePage('link')">Link</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" *ngIf="auth" href="#" id="navbarDropdown" role="button"
@@ -26,8 +26,8 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+        <li  *ngIf="auth" class="nav-item" [ngClass]="currentPage === 'todo'?'active':'hand'">
+          <a class="nav-link" (click)="changePage('todo')">Todo</a>
         </li>
         <li *ngIf="auth" class="nav-item dropdown">
           <a class="btn btn-primary dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
@@ -50,6 +50,18 @@
     </div>
   </nav>
   <router-outlet></router-outlet>
-  <app-welcome *ngIf=" currentPage ==='home' " [isLoggedIn]="auth ? true : false"></app-welcome>
+  <app-welcome *ngIf=" currentPage ==='welcome' " [isLoggedIn]="auth ? true : false"></app-welcome>
   <app-link *ngIf=" currentPage === 'link' " [isLoggedIn]="auth ? true : false"></app-link>
+  <app-todo *ngIf=" currentPage === 'todo' " [isLoggedIn]="auth ? true : false"></app-todo>
+  <ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Session Timeout</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      This is a modal.
+    </div>
+  </ng-template>
 </div>

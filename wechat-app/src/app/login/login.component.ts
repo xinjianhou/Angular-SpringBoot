@@ -1,10 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {NgbTooltipConfig} from '@ng-bootstrap/ng-bootstrap';
-import {Dictionary, ValidationUtil} from '../_utils';
-import {User} from '../_models';
-import {AuthenticationService} from '../_services';
-import {Router} from '@angular/router';
+import { Component, Inject, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
+import { Dictionary, ValidationUtil } from '../_utils';
+import { UserModel } from '../_models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -22,10 +21,10 @@ export class LoginComponent implements OnInit {
     password: ''
   };
 
-  user: User;
+  user: UserModel;
 
   constructor(private router: Router, private formBuilder: FormBuilder,
-              private config: NgbTooltipConfig, private authenticationService: AuthenticationService) {
+              private config: NgbTooltipConfig, @Inject('authService') private authenticationService) {
     config.placement = 'right';
     config.triggers = 'click:hover';
   }
@@ -42,8 +41,8 @@ export class LoginComponent implements OnInit {
 
   buildForm(): void {
     this.loginForm = this.formBuilder.group({
-      username: ['', [Validators.required]],
-      password: ['', [Validators.required]],
+      username: [''],
+      password: [''],
 
     });
     this.loginForm.valueChanges
@@ -75,14 +74,15 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  onSubmit(): void {
+  onSubmit(): boolean {
 
     if (this.loginForm.invalid) {
-      return;
+      ValidationUtil.onValueChanged(this.loginForm, this.formErrors, Dictionary.loginValidationMessage, false);
+      return false;
     }
     this.loading = true;
 
-    this.authenticationService.login(new User(this.f.username.value, this.f.password.value)).subscribe(
+    this.authenticationService.login(new UserModel(this.f.username.value, this.f.password.value)).subscribe(
       result => {
         if (result) {
           // login successful
@@ -100,5 +100,6 @@ export class LoginComponent implements OnInit {
         }
       }
     );
+    return false;
   }
 }

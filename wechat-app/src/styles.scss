@@ -5,8 +5,9 @@
 $fa-font-path: '../node_modules/font-awesome/fonts';
 @import '../node_modules/font-awesome/scss/font-awesome.scss';
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+//@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+@import './assets/google_fonts.css';
 @import '~open-iconic/font/css/open-iconic-bootstrap.css';
 
 @import '../node_modules/@progress/kendo-theme-bootstrap/dist/all.css';

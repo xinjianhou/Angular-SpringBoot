@@ -1,4 +1,4 @@
-export class UploadedFile {
+export class UploadedFileModel {
   id: number;
   fileName: string;
   fileSize: number;

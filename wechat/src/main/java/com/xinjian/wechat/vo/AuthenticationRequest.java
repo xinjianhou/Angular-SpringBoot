@@ -1,4 +1,4 @@
-package com.freshman.vo;
+package com.xinjian.wechat.vo;
 
 import lombok.Data;
 

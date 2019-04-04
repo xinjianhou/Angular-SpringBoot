@@ -1,12 +1,13 @@
-package com.freshman.controller;
+package com.xinjian.wechat.controller;
 
-import com.freshman.service.VideoService;
+import com.xinjian.wechat.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value="${api.base-path}/video")
+@RequestMapping(value="${api.base-path}/video", produces = MediaType.APPLICATION_JSON_VALUE)
 public class VideoController {
 
     @Autowired

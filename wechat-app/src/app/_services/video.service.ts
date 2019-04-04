@@ -4,7 +4,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, pipe} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
 import {ErrorUtil} from '../_utils';
-import {Authentication} from '../_models';
+import {AuthenticationModel} from '../_models';
 
 
 
@@ -42,7 +42,7 @@ export class VideoService {
       tap(res => {
         return res;
       }),
-      catchError(ErrorUtil.handleError<Authentication>(`search video ${name}`))
+      catchError(ErrorUtil.handleError<AuthenticationModel>(`search video ${name}`))
     );
   }
 

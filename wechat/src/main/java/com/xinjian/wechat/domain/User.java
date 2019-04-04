@@ -1,4 +1,4 @@
-package com.freshman.domain;
+package com.xinjian.wechat.domain;
 
 import lombok.Data;
 
