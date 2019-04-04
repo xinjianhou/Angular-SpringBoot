@@ -2,7 +2,6 @@ package com.xinjian.wechat.domain;
 
 import com.xinjian.wechat.util.AuthorityName;
 import lombok.Data;
-import org.springframework.context.annotation.Primary;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -27,11 +26,4 @@ public class Authority {
 //    private List<User> users;
 
 
-//    public List<User> getUsers() {
-//        return users;
-//    }
-//
-//    public void setUsers(List<User> users) {
-//        this.users = users;
-//    }
 }

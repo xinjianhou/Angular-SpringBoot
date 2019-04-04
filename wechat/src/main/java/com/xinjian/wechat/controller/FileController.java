@@ -10,7 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/file")
+@RequestMapping(value = "${api.base-path}/file")
 public class FileController {
 
     @Autowired
@@ -33,7 +33,7 @@ public class FileController {
         return fileService.saveFile(file);
     }
 
-    @PostMapping(value="/delete")
+    @DeleteMapping(value="/delete")
     public boolean delete(@RequestBody File file){
      return fileService.deleteFile(file);
 

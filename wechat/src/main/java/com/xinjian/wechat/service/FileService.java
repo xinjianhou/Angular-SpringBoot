@@ -1,8 +1,7 @@
-package com.xinjian.wechat.service;
+package com.freshman.service;
 
-import com.xinjian.wechat.domain.File;
-import com.xinjian.wechat.repository.FileRepository;
-import org.dozer.Mapper;
+import com.freshman.domain.File;
+import com.freshman.repository.FileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

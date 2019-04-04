@@ -1,4 +1,4 @@
-package com.xinjian.wechat;
+package com.freshman;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

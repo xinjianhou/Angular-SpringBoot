@@ -1,6 +1,4 @@
-package com.xinjian.wechat.validation;
-
-import sun.misc.Contended;
+package com.freshman.validation;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

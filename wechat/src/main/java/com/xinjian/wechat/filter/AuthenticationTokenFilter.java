@@ -1,10 +1,11 @@
-package com.xinjian.wechat.filter;
+package com.freshman.filter;
 
-import com.xinjian.wechat.config.Config;
-import com.xinjian.wechat.util.JwtTokenUtil;
+import com.freshman.config.Config;
+import com.freshman.util.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -29,13 +30,13 @@ public class AuthenticationTokenFilter extends OncePerRequestFilter {
             authToken = authToken.substring(7);
         }
 
-        String username = jwtTokenUtil.verify(authToken);
+        UserDetails user = jwtTokenUtil.verify(authToken);
 
-        logger.info("checking authentication for user " + username);
+        logger.info("checking authentication for user " + user);
 
         // token校验成功则不再需要验证
-        if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-            UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(username, null, null);
+        if (user != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+            UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(user.getUsername(), "N/A", user.getAuthorities());
             authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }

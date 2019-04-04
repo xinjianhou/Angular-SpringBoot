@@ -1,4 +1,4 @@
-package com.xinjian.wechat.domain;
+package com.freshman.domain;
 
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;

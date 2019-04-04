@@ -1,6 +1,6 @@
-package com.xinjian.wechat.repository;
+package com.freshman.repository;
 
-import com.xinjian.wechat.domain.User;
+import com.freshman.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

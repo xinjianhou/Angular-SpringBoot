@@ -1,4 +1,4 @@
-package com.xinjian.wechat.config;
+package com.freshman.config;
 
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
@@ -42,9 +42,9 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Api Documentation")
-                .description("Api Documentation")
-                .contact(new Contact("Jason", "http://blog.51cto.com/7308310", "houxinjian7@gmail.com"))
+                .title("WeChat Documentation")
+                .description("WeChat Api Documentation")
+                .contact(new Contact("xinjian.hou", "http://localhost:9011/WeChat", "houxinjian7@gmail.com"))
                 .version("1.0")
                 .build();
     }

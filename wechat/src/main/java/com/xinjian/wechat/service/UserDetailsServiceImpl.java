@@ -1,10 +1,10 @@
-package com.xinjian.wechat.service;
+package com.freshman.service;
 
-import com.xinjian.wechat.domain.Authority;
-import com.xinjian.wechat.domain.User;
-import com.xinjian.wechat.repository.UserRepository;
-import com.xinjian.wechat.util.AuthUtil;
-import com.xinjian.wechat.vo.UserVo;
+import com.freshman.domain.User;
+import com.freshman.repository.UserRepository;
+import com.freshman.util.AuthUtil;
+import com.freshman.vo.UserVo;
+import com.freshman.domain.Authority;
 import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;

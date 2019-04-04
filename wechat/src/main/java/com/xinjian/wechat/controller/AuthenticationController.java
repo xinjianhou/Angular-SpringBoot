@@ -1,14 +1,16 @@
-package com.xinjian.wechat.controller;
+package com.freshman.controller;
 
-import com.xinjian.wechat.domain.User;
-import com.xinjian.wechat.service.UserDetailsServiceImpl;
-import com.xinjian.wechat.util.JwtTokenUtil;
-import com.xinjian.wechat.vo.AuthenticationRequest;
-import com.xinjian.wechat.vo.AuthenticationResponse;
+import com.freshman.domain.User;
+import com.freshman.util.JwtTokenUtil;
+import com.freshman.vo.AuthenticationRequest;
+import com.freshman.exception.ErrorMessage;
+import com.freshman.service.UserDetailsServiceImpl;
+import com.freshman.vo.AuthenticationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -18,7 +20,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/auth", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "${api.base-path}/auth", produces = MediaType.APPLICATION_JSON_VALUE)
 public class AuthenticationController {
 
     @Autowired
@@ -39,7 +41,7 @@ public class AuthenticationController {
 
         // Reload password post-security so we can generate token
         final UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUsername());
-        final String token = jwtTokenUtil.generate(userDetails.getUsername());
+        final String token = jwtTokenUtil.generate(userDetails);
 
         // Return the token
         return new AuthenticationResponse(token,userDetails.getUsername());
@@ -51,9 +53,12 @@ public class AuthenticationController {
         return user;
     }
 
+    //优先级更高
     @ExceptionHandler(AuthenticationException.class)
     @ResponseStatus(HttpStatus.FORBIDDEN)
-    public void handleAuthenticationException(AuthenticationException exception) {
+    public ResponseEntity<ErrorMessage> handleAuthenticationException(AuthenticationException exception) {
+        exception.printStackTrace();
+        return ResponseEntity.badRequest().body(new ErrorMessage("403", "authentication exception"));
     }
 
 

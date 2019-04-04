@@ -1,7 +1,6 @@
-package com.xinjian.wechat.config;
+package com.freshman.config;
 
-import com.xinjian.wechat.config.Config.Cors;
-import com.xinjian.wechat.filter.AuthenticationTokenFilter;
+import com.freshman.filter.AuthenticationTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;
@@ -21,6 +20,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
 import static org.springframework.http.HttpMethod.OPTIONS;
 
 
@@ -47,8 +47,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .requestMatchers(EndpointRequest.to("health", "info")).permitAll()
                 .antMatchers(config.getJwt().getAuthenticationPath()).permitAll()
-                .antMatchers("/user/createUser").permitAll()
-                //.antMatchers("/video/**").permitAll()
                 .antMatchers(OPTIONS, "/**").permitAll()
                 .anyRequest().authenticated().and()
                 .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class) // Custom JWT based security filter
@@ -74,7 +72,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        Cors cors = config.getCors();
+        Config.Cors cors = config.getCors();
         configuration.setAllowedOrigins(cors.getAllowedOrigins());
         configuration.setAllowedMethods(cors.getAllowedMethods());
         configuration.setAllowedHeaders(cors.getAllowedHeaders());
@@ -82,8 +80,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
+
     @Override
-    public void configure(WebSecurity web) throws Exception {
+    public void configure(WebSecurity web) {
         web.ignoring().antMatchers("/api-docs", "/swagger-resources/**", "/swagger-ui.html**", "/webjars/**");
     }
 
