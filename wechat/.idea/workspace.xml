@@ -2,93 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64f1bf5a-45dc-4f9d-9994-11cd71a2a232" name="Default" comment="modify">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_05.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_8_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_highlighter_8_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_memory_8_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_fontbox_2_0_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_pdfbox_2_0_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_excelant_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_scratchpad_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/SearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/TodoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/exception/ErrorControllerAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/exception/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/VideoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/FileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/vo/FileVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/vo/SearchVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/vo/TodoVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xinjian/wechat/controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_models/authentication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_models/authentication.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_models/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_models/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_models/uploadedFile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_models/uploadedFile.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_models/user.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_services/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_services/authentication.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_services/file.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_services/file.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_services/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_services/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_services/storage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_services/storage.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_services/video.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_services/video.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_utils/validation-util.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_utils/validation-util.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/home-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/home-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/home.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/link/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/link/link.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/link/link.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/link/link.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/link/link.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/welcome/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/welcome/welcome.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/welcome/welcome.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/register/register.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_0_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_0_6_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Authority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Authority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/File.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/filter/AuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/filter/AuthenticationTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/repository/FileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/repository/FileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/FileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/AuthUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/AuthUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/JwtTokenUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/LogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/validation/EmailValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/validation/EmailValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/validation/ValidEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/validation/ValidEmail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/vo/AuthenticationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/vo/AuthenticationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/xinjian/wechat/WechatApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xinjian/wechat/WechatApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/FileUtil.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -170,6 +87,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="60">
+                <caret line="4" column="53" lean-forward="true" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="397">
@@ -181,35 +110,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/UserDetailsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
+            <state relative-caret-position="-278">
               <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/vo/FileVo.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/FileUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="230" column="23" selection-start-line="230" selection-start-column="23" selection-end-line="230" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="325">
+              <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -217,8 +131,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="121" column="4" selection-start-line="121" selection-start-column="3" selection-end-line="121" selection-end-column="4" />
+            <state relative-caret-position="352">
+              <caret line="128" column="14" selection-start-line="128" selection-start-column="14" selection-end-line="128" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/FileUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="88" column="3" selection-start-line="88" selection-start-column="3" selection-end-line="88" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -244,6 +170,8 @@
       <find>EmbeddedServletContainerFactory</find>
       <find>7.1.0</find>
       <find>aspectjweaver</find>
+      <find>ScratchFileBuffer</find>
+      <find>main</find>
     </findStrings>
     <replaceStrings>
       <replace>logger.info</replace>
@@ -256,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/AuthorityName.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/impl/UserDetailsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/IUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/LogAspect.java" />
@@ -291,7 +218,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/banner.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/vo/TodoVo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Authority.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/AuthenticationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/JwtTokenUtil.java" />
@@ -302,11 +228,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/FileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/vo/FileVo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/SearchController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/FileUtil.java" />
         <option value="$PROJECT_DIR$/readme.rd" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/vo/SearchVo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/FileUtil.java" />
       </list>
     </option>
   </component>
@@ -384,6 +312,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wechat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -394,6 +331,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wechat" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wechat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wechat" type="b2602c69:ProjectViewProjectNode" />
@@ -433,7 +379,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554356906077" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554372653893" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
@@ -639,7 +585,7 @@
       <workItem from="1551266285697" duration="810000" />
       <workItem from="1551269370680" duration="23136000" />
       <workItem from="1552191001272" duration="23313000" />
-      <workItem from="1553857210652" duration="13788000" />
+      <workItem from="1553857210652" duration="17754000" />
     </task>
     <task id="LOCAL-00001" summary="modify">
       <created>1533214516102</created>
@@ -684,7 +630,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284938000" />
+    <option name="totallyTimeSpent" value="288904000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -699,7 +645,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49798387" visible="true" weight="0.29899856" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49798387" weight="0.29899856" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -709,13 +655,13 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21084337" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5120482" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30963856" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49642345" visible="true" weight="0.26626506" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49642345" weight="0.26626506" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32891566" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
@@ -736,6 +682,44 @@
       <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.29971388" />
       <window_info anchor="right" id="Maven" order="11" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49798387" visible="true" weight="0.29899856" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.5020161" side_tool="true" weight="0.2532189" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5120482" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30963856" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49642345" weight="0.26626506" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32891566" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32891566" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5035765" side_tool="true" weight="0.24578314" />
+      <window_info anchor="bottom" id="TypeScript" order="14" />
+      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Bean Validation" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="9" weight="0.3297568" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.29971388" />
+      <window_info anchor="right" id="Maven" order="11" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -761,7 +745,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/FileUtil.java</url>
-          <line>33</line>
+          <line>61</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
@@ -1087,41 +1071,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-164">
           <caret line="144" column="35" selection-start-line="144" selection-start-column="31" selection-end-line="144" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="230" column="23" selection-start-line="230" selection-start-column="23" selection-end-line="230" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="121" column="4" selection-start-line="121" selection-start-column="3" selection-end-line="121" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1152,20 +1105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/dozerMapping.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="62" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/AuthenticationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-173">
-          <caret line="24" column="46" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
@@ -1185,8 +1124,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/UserDetailsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
+        <state relative-caret-position="-278">
           <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/dozerMapping.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="62" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="53" lean-forward="true" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/AuthenticationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-173">
+          <caret line="24" column="46" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="128" column="14" selection-start-line="128" selection-start-column="14" selection-end-line="128" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="88" column="3" selection-start-line="88" selection-start-column="3" selection-end-line="88" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

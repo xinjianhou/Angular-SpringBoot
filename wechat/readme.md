@@ -4,5 +4,5 @@
 
  postman post请求 http://localhost:8888/WeChat/auth/checkUserByUsername; heaser（content-type:app/json）;body {
                                                                                                           	"username":"admin"
-                                                                                                          	
+ api http://localhost:8888/swagger-ui.html                                                                                          	
                                                                                                           }
