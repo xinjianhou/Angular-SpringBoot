@@ -55,7 +55,7 @@ public class Knowledge implements Serializable {
 
 
     @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
-    @JoinTable(name="FILES")
+    @JoinTable(name="FILE")
 	@JoinColumn(name="id")
     private List<File> fileList = new ArrayList();
 }

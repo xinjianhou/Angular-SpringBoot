@@ -21,7 +21,8 @@ public class KnowledgeServiceImpl {
 		return knowledgeRepository.find(knowledgeName);
 	}
 	
-	public boolean saveKnowledge(Knowledge knowledge){
-    	return (null != knowledgeRepository.save(knowledge))? true :false;
+	public Knowledge save(Knowledge knowledge){
+		Knowledge kl = knowledgeRepository.save(knowledge);
+    	return kl;
    }
 }

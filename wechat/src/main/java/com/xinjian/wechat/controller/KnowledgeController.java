@@ -27,4 +27,10 @@ public class KnowledgeController {
     	}
     	return kl;
     }
+    
+    @PostMapping("/save")
+    public Knowledge save(@RequestBody final Knowledge knowledge){
+    	Knowledge kl = knowledgeService.save(knowledge);
+    	return kl;
+    }
 }
