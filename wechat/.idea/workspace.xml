@@ -2,42 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64f1bf5a-45dc-4f9d-9994-11cd71a2a232" name="Default" comment="modify">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/InitApplicationRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/FolderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Folder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/repository/FolderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/FolderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/SearchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_models/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_models/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_services/file.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_services/file.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_services/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_services/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/_utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/_utils/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/home-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/home-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/home.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/link/link.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/link/link.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/link/link.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/link/link.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/home/welcome/welcome.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/home/welcome/welcome.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/login/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/app/register/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wechat-app/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../wechat-app/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/KnowledgeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/KnowledgeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/File.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Knowledge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Knowledge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/SearchServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/util/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/dozerMapping.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/dozerMapping.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,37 +74,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
+            <state relative-caret-position="210">
               <caret line="14" lean-forward="true" selection-start-line="12" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.7.RELEASE/spring-beans-5.0.7.RELEASE.jar!/org/springframework/beans/factory/support/ConstructorResolver.class">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Folder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="572" selection-start-line="572" selection-end-line="572" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-290">
-              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+            <state relative-caret-position="480">
+              <caret line="32" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,7 +98,19 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/VideoController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="17" column="157" selection-start-line="17" selection-start-column="157" selection-end-line="17" selection-end-column="157" />
+              <caret line="17" column="160" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="160" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/FileController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="35" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/KnowledgeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="240">
+              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -177,8 +141,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Knowledge.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10">
-              <caret line="35" column="44" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="44" />
+            <state relative-caret-position="600">
+              <caret line="59" column="20" lean-forward="true" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/File.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="30" column="26" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -266,10 +239,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/SearchService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/SearchController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Knowledge.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/KnowledgeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/InitApplicationRunner.java" />
         <option value="$PROJECT_DIR$/src/main/resources/data.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Knowledge.java" />
       </list>
     </option>
   </component>
@@ -389,7 +362,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555120315110" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555121014678" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
@@ -603,7 +576,7 @@
       <workItem from="1555075978665" duration="22000" />
       <workItem from="1555076408643" duration="1172000" />
       <workItem from="1555077694107" duration="2575000" />
-      <workItem from="1555081060728" duration="3505000" />
+      <workItem from="1555081060728" duration="4151000" />
     </task>
     <task id="LOCAL-00001" summary="modify">
       <created>1533214516102</created>
@@ -648,7 +621,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="313237000" />
+    <option name="totallyTimeSpent" value="313883000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -663,7 +636,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49798387" visible="true" weight="0.3469242" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49798387" visible="true" weight="0.3469242" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -673,7 +646,7 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.66385543" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.66385543" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49785408" weight="0.7072289" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1041,16 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/FileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/service/SearchService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1473">
@@ -1078,13 +1041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -1096,16 +1052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Folder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1127,13 +1073,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-290">
           <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/VideoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="157" selection-start-line="17" selection-start-column="157" selection-end-line="17" selection-end-column="157" />
         </state>
       </provider>
     </entry>
@@ -1159,13 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/KnowledgeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/config/InitApplicationRunner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -1176,17 +1108,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Knowledge.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="35" column="44" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="44" />
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="12" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/VideoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="14" lean-forward="true" selection-start-line="12" selection-end-line="14" />
+        <state relative-caret-position="195">
+          <caret line="17" column="160" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="160" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/controller/KnowledgeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Folder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/Knowledge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="59" column="20" lean-forward="true" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xinjian/wechat/domain/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="26" />
         </state>
       </provider>
     </entry>

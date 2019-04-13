@@ -13,7 +13,7 @@
     </div>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <div class="video" *ngIf="isLoggedIn">
+        <div class="video">
           <video controls height="300" (click)="toggleVideo()" #videoPlayer>
             <source [src]="videoSource" type="video/mp4" />
             Browser not supported

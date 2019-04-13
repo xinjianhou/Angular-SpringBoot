@@ -48,9 +48,13 @@ public class Knowledge implements Serializable {
     @NotNull
     @Size(min = 0, max = 300)
     private String knowledgeContent;
-	
-	
-	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+
+    @Column(name="LOCATION", length=100)
+    @NotNull
+    private String location;
+
+
+    @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
     @JoinTable(name="FILES")
 	@JoinColumn(name="id")
     private List<File> fileList = new ArrayList();
