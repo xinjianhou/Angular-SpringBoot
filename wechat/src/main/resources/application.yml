@@ -132,5 +132,6 @@ management:
     port: 8043
 
 
-
+profile:
+   uploadPath: C:/Users/David.Yang01/Documents/Downloads
 
