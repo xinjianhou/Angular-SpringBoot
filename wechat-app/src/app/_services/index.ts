@@ -5,3 +5,4 @@ export * from './video.service';
 export * from './file.service';
 export * from './tooltip.service';
 export * from './todo.service';
+export * from './search.service';

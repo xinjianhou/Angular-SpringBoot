@@ -10,6 +10,7 @@ export const environment = {
   video: '/video',
   file: '/file',
   todo: '/todo',
+  search: '/search',
   expiration: 2 * 60 * 60,
 };
 

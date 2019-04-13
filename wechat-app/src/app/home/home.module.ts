@@ -15,6 +15,7 @@ import { TodoComponent } from './todo/todo.component';
 import { TodoFooterComponent } from './todo/todo-footer/todo-footer.component';
 import { TodoHeaderComponent } from './todo/todo-header/todo-header.component';
 import { TodoService } from '../_services';
+import { HtmlPipe } from '../_utils';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { TodoService } from '../_services';
     TodoComponent,
     TodoFooterComponent,
     TodoHeaderComponent,
+    HtmlPipe,
   ],
 
   providers: [

@@ -10,13 +10,14 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "FILES")
+@Table(name = "FILE")
 public class File implements Serializable {
 
     @Id
+    @NotNull
     @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "FILES_SEQ")
-    @SequenceGenerator(name = "FILES_SEQ", sequenceName = "FILES_SEQ", initialValue = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "FILE_SEQ")
+    @SequenceGenerator(name = "FILE_SEQ", sequenceName = "FILE_SEQ", initialValue = 1)
     private Long id;
 
     @Column(name="FILE_NAME",length=30)

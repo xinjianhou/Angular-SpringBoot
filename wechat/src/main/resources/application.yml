@@ -131,7 +131,9 @@ management:
   server:
     port: 8043
 
+file:
+  source: /Users/xinjianhou/Documents
+  index: /Users/xinjianhou/Documents/lucene
 
-profile:
-   uploadPath: C:/Users/David.Yang01/Documents/Downloads
+
 

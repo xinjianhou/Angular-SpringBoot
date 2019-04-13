@@ -15,7 +15,7 @@ public class VideoController {
     @GetMapping(value="/home")
     public FileSystemResource videoSource() {
 
-        return new FileSystemResource(videoService.getVideo("/Users/xinjianhou/music/iTunes/iTunes Media/Home Videos/sexo-18og-anjelica-121215.mp41"));
+        return new FileSystemResource(videoService.getVideo("/Users/xinjianhou/Downloads/PMP（包含真题刷题升级版）/PMP第六版  视频课  光环 清辉/光环：2018年考前了解视频讲解/第1章PMBOK改版了/1.mp4"));
 
 
     }

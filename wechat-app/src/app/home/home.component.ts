@@ -5,6 +5,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 import { ConfirmComponent } from '../confirm/confirm.component';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -32,16 +33,16 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.auth = this.storage.getAuth();
     this.currentPage = 'welcome';
-    // this.session_time = environment.expiration;
-    // if (this.auth) {
-    //   this.startTimer();
-    // }
+    this.session_time = environment.expiration;
+    if (this.auth) {
+      this.startTimer();
+    }
 
-    this.route.params.forEach((params: Params) => {
-        const filter = params['filter'];
-        this.filterPages(filter);
-      }
-    );
+    // this.route.params.forEach((params: Params) => {
+    //     const filter = params['filter'];
+    //     this.filterPages(filter);
+    //   }
+    // );
   }
 
   changePage(page: string): void {
@@ -92,7 +93,7 @@ export class HomeComponent implements OnInit {
     } else {
       if (this.router.navigate([filter])) {
         this.currentPage = filter;
-        this.router.navigate([`home/${filter}`]);
+        // this.router.navigate([`home/${filter}`]);
       }
     }
   }

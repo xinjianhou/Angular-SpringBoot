@@ -3,8 +3,8 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 import { NgbDatepickerConfig, NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 import { DateUtil } from '../../_utils';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
-import { FileService, TooltipService } from '../../_services';
-import { UploadedFileModel } from '../../_models';
+import { FileService, SearchService, TooltipService } from '../../_services';
+import { SearchModel, UploadedFileModel } from '../../_models';
 import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap';
 import { AlertComponent } from '../../alert/alert.component';
 
@@ -21,6 +21,7 @@ export class LinkComponent implements OnInit {
   progress: { percentage: number } = {percentage: 0};
 
   file: File;
+  results: SearchModel[];
 
   files: UploadedFileModel[];
 
@@ -39,7 +40,8 @@ export class LinkComponent implements OnInit {
   }
 
   constructor(private formBuilder: FormBuilder, config: NgbDatepickerConfig,
-              private fileService: FileService, private modalService: BsModalService, private tooltipService: TooltipService) {
+              private fileService: FileService, private modalService: BsModalService, private tooltipService: TooltipService,
+              private searchService: SearchService,) {
     config.maxDate = DateUtil.formatDate(new Date(1990, 1, 1));
     config.maxDate = DateUtil.formatDate(new Date(2099, 11, 31));
     config.outsideDays = 'collapsed';
@@ -55,7 +57,8 @@ export class LinkComponent implements OnInit {
 
   buildForm(): void {
     this.linkForm = this.formBuilder.group({
-        searchDate: ['', [Validators.required]]
+        searchDate: ['', [Validators.required]],
+        keyword: ['', [Validators.required]],
 
       }
     );
@@ -146,4 +149,9 @@ export class LinkComponent implements OnInit {
     this.tooltipService.closeTooltips(...tooltips);
   }
 
+  doSearch() {
+    this.searchService.doSearch(this.f.keyword.value).subscribe(rs => {
+      this.results = rs;
+    });
+  }
 }

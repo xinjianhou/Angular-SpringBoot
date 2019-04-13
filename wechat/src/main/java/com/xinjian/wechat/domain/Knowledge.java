@@ -30,6 +30,7 @@ import lombok.Data;
 public class Knowledge implements Serializable {
 
 	@Id
+    @NotNull
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "KNOWLEDGE_SEQ")
     @SequenceGenerator(name = "KNOWLEDGE_SEQ", sequenceName = "KNOWLEDGE_SEQ", initialValue = 1)
@@ -39,15 +40,18 @@ public class Knowledge implements Serializable {
     @NotNull
     @Size(min = 1, max = 50)
     private String knowledgeName;
+
+    @Column(name = "sequence" )
+	private int sequence;
 	
-	@Column(name = "KNOWLEDGECONTENT", length = 100, unique = true)
+	@Column(name = "KNOWLEDGECONTENT", length = 300)
     @NotNull
-    @Size(min = 0, max = 100)
+    @Size(min = 0, max = 300)
     private String knowledgeContent;
 	
 	
 	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
     @JoinTable(name="FILES")
 	@JoinColumn(name="id")
-    private List<File> fileList = new ArrayList<File>();
+    private List<File> fileList = new ArrayList();
 }

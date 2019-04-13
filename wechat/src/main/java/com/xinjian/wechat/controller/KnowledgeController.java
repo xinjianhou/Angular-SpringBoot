@@ -3,10 +3,7 @@ package com.xinjian.wechat.controller;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.xinjian.wechat.domain.Knowledge;
 import com.xinjian.wechat.service.KnowledgeServiceImpl;
@@ -22,8 +19,8 @@ public class KnowledgeController {
 	@Autowired
 	private KnowledgeServiceImpl knowledgeService;
 	
-    @PostMapping(value = "/")
-    public Knowledge find(@RequestBody Knowledge knowledge) {
+    @GetMapping(value = "/{knowledge}")
+    public Knowledge find(@PathVariable final Knowledge knowledge) {
     	Knowledge kl = null;
     	if(StringUtils.isNotBlank(knowledge.getKnowledgeName())){
     		kl = knowledgeService.find(knowledge.getKnowledgeName());

@@ -27,7 +27,7 @@ export class FileService {
 
     formData.append('file', file);
 
-    const req = new HttpRequest('POST', this.url + '/upload', formData, {
+    const req = new HttpRequest('POST', this.url, formData, {
       reportProgress: true,
       responseType: 'text'
     });
@@ -37,7 +37,7 @@ export class FileService {
   }
 
   getFiles(): Observable<any> {
-    return this.http.get(this.url + '/getFiles', httpOptions).pipe(
+    return this.http.get(this.url, httpOptions).pipe(
       tap(res => {
         return res;
       }),
@@ -53,7 +53,7 @@ export class FileService {
   }
 
   deleteFile(file: UploadedFileModel): Observable<boolean> {
-    return this.http.post(this.url + '/delete', file, httpOptions).pipe(tap(res => {
+    return this.http.post(this.url, file, httpOptions).pipe(tap(res => {
       return res;
     }), catchError(ErrorUtil.handleError<any>(`delete file ${file.fileName}`)));
   }

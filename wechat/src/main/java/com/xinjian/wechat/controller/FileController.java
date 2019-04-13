@@ -24,18 +24,18 @@ public class FileController {
 
     }
 
-    @GetMapping(value = "/getFiles")
+    @GetMapping
     public List<File> getFileList(){
         return fileService.getFileList();
     }
 
-    @PostMapping(value = "/upload")
-    public boolean uploadFile(@RequestParam("file") MultipartFile file) {
+    @PostMapping
+    public boolean uploadFile(@RequestParam("file") final MultipartFile file) {
         return fileService.saveFile(file);
     }
 
-    @DeleteMapping(value="/delete")
-    public boolean delete(@RequestBody File file){
+    @DeleteMapping
+    public boolean delete(@RequestBody final File file){
      return fileService.deleteFile(file);
 
 

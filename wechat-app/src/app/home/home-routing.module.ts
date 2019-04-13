@@ -8,11 +8,11 @@ import { HomeComponent } from './home.component';
 
 const routes: Routes = [
   {
-    path: 'home/:filter', component: HomeComponent,
+    path: 'home', component: HomeComponent,
     children: [
       {path: 'welcome', component: WelcomeComponent},
       {path: 'link', component: LinkComponent},
-      {path: 'todo/:filter', component: TodoComponent},
+      {path: 'todo', component: TodoComponent},
       ]
   },
 
