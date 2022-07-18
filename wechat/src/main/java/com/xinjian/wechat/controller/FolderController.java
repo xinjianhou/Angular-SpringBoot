@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "${api.base-path}/folder", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "folder", produces = MediaType.APPLICATION_JSON_VALUE)
 public class FolderController {
 
 

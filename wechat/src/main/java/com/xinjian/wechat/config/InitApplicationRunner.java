@@ -1,6 +1,7 @@
 package com.xinjian.wechat.config;
 
 import com.xinjian.wechat.domain.Folder;
+import com.xinjian.wechat.service.FileService;
 import com.xinjian.wechat.service.FolderService;
 import com.xinjian.wechat.util.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,10 @@ public class InitApplicationRunner implements ApplicationRunner {
 
     @Autowired
     private FolderService folderService;
+
+    @Autowired
+    private FileService fileService;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
        // System.out.println(args.getOptionValues("init")+"--------------------");
@@ -33,6 +38,22 @@ public class InitApplicationRunner implements ApplicationRunner {
                 folders.add(folder);
             }
         }
+//        List<File> files = FileUtil.listAllFiles(Source_DIR,null);
+//        List<com.xinjian.wechat.domain.File> fileList = new ArrayList();
+//        if(!files.isEmpty()){
+//            for(File f: files){
+//                com.xinjian.wechat.domain.File file = new com.xinjian.wechat.domain.File();
+//                file.setFileName(f.getName());
+//                file.setFileSize(f.getTotalSpace());
+//                file.setLocation(f.getAbsolutePath());
+//                fileList.add(file);
+//            }
+//
+//        }
+//        if(!fileService.saveAll(fileList)){
+//            throw  new Exception();
+//        }
+
         if(!folderService.saveFolders(folders)){
             throw  new Exception();
         }

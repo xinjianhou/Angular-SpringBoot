@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "${api.base-path}/search", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/search", produces = MediaType.APPLICATION_JSON_VALUE)
 public class SearchController {
 
 	@Autowired

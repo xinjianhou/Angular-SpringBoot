@@ -5,6 +5,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LinkComponent } from './link/link.component';
 import { TodoComponent } from './todo/todo.component';
 import { HomeComponent } from './home.component';
+import { KnowledgeComponent } from './knowledge/knowledge.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
       {path: 'welcome', component: WelcomeComponent},
       {path: 'link', component: LinkComponent},
       {path: 'todo', component: TodoComponent},
+      {path: 'knowledge', component: KnowledgeComponent},
       ]
   },
 

@@ -40,9 +40,9 @@ export class WelcomeComponent implements OnInit {
     this.buildForm();
     // this.f.searchDate.setValue(DateUtil.formatDate());
     this.videoSource = '';
-    if (this.isLoggedIn) {
+    // if (this.isLoggedIn) {
       this.loadVideo();
-    }
+    // }
   }
 
   loadVideo(): void {

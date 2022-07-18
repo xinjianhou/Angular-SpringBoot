@@ -25,15 +25,21 @@
         <!--</field>-->
     </mapping>
     <!--<mapping>-->
-        <!--<class-a map-null="false">org.springframework.web.multipart.MultipartFile</class-a>-->
-        <!--<class-b map-null="false">com.xinjian.wechat.domain.File</class-b>-->
-        <!--<field>-->
-            <!--<a>fileName</a>-->
-            <!--<b>fileName</b>-->
-        <!--</field>-->
-        <!--<field>-->
-            <!--<a>size</a>-->
-            <!--<b>fileSize</b>-->
-        <!--</field>-->
+    <!--<class-a map-null="false">org.springframework.web.multipart.MultipartFile</class-a>-->
+    <!--<class-b map-null="false">com.xinjian.wechat.domain.File</class-b>-->
+    <!--<field>-->
+    <!--<a>fileName</a>-->
+    <!--<b>fileName</b>-->
+    <!--</field>-->
+    <!--<field>-->
+    <!--<a>size</a>-->
+    <!--<b>fileSize</b>-->
+    <!--</field>-->
     <!--</mapping>-->
+
+    <mapping>
+        <class-a map-null="false">com.xinjian.wechat.vo.FileVo</class-a>
+        <class-b map-null="false">com.xinjian.wechat.domain.File</class-b>
+
+    </mapping>
 </mappings>

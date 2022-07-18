@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping(value = "${api.base-path}/todo", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "todo", produces = MediaType.APPLICATION_JSON_VALUE)
 public class TodoController {
 
     private static List<TodoVo> todos = new ArrayList();

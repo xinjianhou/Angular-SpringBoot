@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping(value = "${api.base-path}/auth", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "auth", produces = MediaType.APPLICATION_JSON_VALUE)
 public class AuthenticationController {
 
     @Autowired

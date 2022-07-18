@@ -31,7 +31,7 @@ public class UserControllerTest {
     public void testGetUserByName() {
         Map<String, String> urlVariables = new HashMap<>();
         urlVariables.put("username", "hadamen");
-        Assert.assertEquals(user, restTemplate.getForObject("getUserByUsername/{username}", User.class, urlVariables));
+        Assert.assertEquals(user, restTemplate.getForObject("wechat/getUserByUsername/{username}", User.class, urlVariables));
 
     }
 }

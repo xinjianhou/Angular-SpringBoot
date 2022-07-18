@@ -13,6 +13,9 @@
         <li *ngIf="auth" class="nav-item" [ngClass]="currentPage === 'link'?'active':'hand'">
           <a class="nav-link" (click)="changePage('link')">Link</a>
         </li>
+        <li  class="nav-item" [ngClass]="currentPage === 'knowledge'?'active':'hand'">
+          <a class="nav-link" (click)="changePage('knowledge')">Knowledge List</a>
+        </li>
         <!--<li class="nav-item dropdown">-->
           <!--<a class="nav-link dropdown-toggle" *ngIf="auth" href="#" id="navbarDropdown" role="button"-->
              <!--data-toggle="dropdown"-->
@@ -51,7 +54,8 @@
   </nav>
   <router-outlet></router-outlet>
   <app-welcome *ngIf=" currentPage ==='welcome' " [isLoggedIn]="auth ? true : false"></app-welcome>
-<!--  <app-link *ngIf=" currentPage === 'link' " [isLoggedIn]="auth ? true : false"></app-link>-->
+  <app-knowledge *ngIf=" currentPage ==='knowledge' " [isLoggedIn]="auth ? true : false"></app-knowledge>
+  <app-link *ngIf=" currentPage === 'link' " [isLoggedIn]="auth ? true : false"></app-link>
 <!--  <app-todo *ngIf=" currentPage === 'todo' " [isLoggedIn]="auth ? true : false"></app-todo>-->
   <ng-template #template>
     <div class="modal-header">

@@ -13,7 +13,7 @@ import javax.validation.Valid;
 
 
 @RestController
-@RequestMapping(value = "${api.base-path}/user", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "user", produces = MediaType.APPLICATION_JSON_VALUE)
 @Api(tags = {"User Controller"})
 public class UserController {
 

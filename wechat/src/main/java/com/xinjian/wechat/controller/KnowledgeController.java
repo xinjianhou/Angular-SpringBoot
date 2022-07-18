@@ -13,12 +13,12 @@ import com.xinjian.wechat.service.KnowledgeServiceImpl;
  * @author
  */
 @RestController
-@RequestMapping(value = "${api.base-path}/knowledge", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/knowledge", produces = MediaType.APPLICATION_JSON_VALUE)
 public class KnowledgeController {
 
 	@Autowired
 	private KnowledgeServiceImpl knowledgeService;
-	
+
     @GetMapping(value = "/{knowledge}")
     public Knowledge find(@PathVariable final Knowledge knowledge) {
     	Knowledge kl = null;

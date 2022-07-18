@@ -17,5 +17,5 @@ public interface KnowledgeRepository extends JpaRepository<Knowledge, Long> {
 	//Knowledge(Entity Name)
 	@Query("SELECT k FROM Knowledge k WHERE k.knowledgeName = :knowledgeName")
     Knowledge find(@Param("knowledgeName") String knowledgeName);
-	
+
 }

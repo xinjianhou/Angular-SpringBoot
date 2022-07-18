@@ -45,9 +45,9 @@ export class FileService {
     );
   }
 
-  async downloadFile(id: number): Promise<Blob> {
+  async downloadFile(path: string): Promise<Blob> {
     const file = await this.http.post<Blob>(
-      this.url + '/download', id,
+      this.url + '/download', path,
       {responseType: 'blob' as 'json'}).toPromise();
     return file;
   }

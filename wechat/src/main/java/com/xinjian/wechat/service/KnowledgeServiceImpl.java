@@ -16,13 +16,17 @@ public class KnowledgeServiceImpl {
 
 	@Autowired
     private KnowledgeRepository knowledgeRepository;
-	
+
 	public Knowledge find(String knowledgeName){
 		return knowledgeRepository.find(knowledgeName);
 	}
+
 	
-	public Knowledge save(Knowledge knowledge){
+	public Knowledge save(Knowledge knowledge) {
 		Knowledge kl = knowledgeRepository.save(knowledge);
-    	return kl;
+		return kl;
+	}
+	public boolean saveKnowledge(Knowledge knowledge){
+    	return (null != knowledgeRepository.save(knowledge))? true :false;
    }
 }

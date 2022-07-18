@@ -35,7 +35,7 @@ public class Knowledge implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "KNOWLEDGE_SEQ")
     @SequenceGenerator(name = "KNOWLEDGE_SEQ", sequenceName = "KNOWLEDGE_SEQ", initialValue = 1)
     private Long id;
-	
+
 	@Column(name = "KNOWLEDGENAME", length = 50, unique = true)
     @NotNull
     @Size(min = 1, max = 50)
@@ -43,7 +43,7 @@ public class Knowledge implements Serializable {
 
     @Column(name = "sequence" )
 	private int sequence;
-	
+
 	@Column(name = "KNOWLEDGECONTENT", length = 300)
     @NotNull
     @Size(min = 0, max = 300)

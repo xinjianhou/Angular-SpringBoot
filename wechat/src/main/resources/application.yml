@@ -15,9 +15,9 @@ spring:
   datasource:
     dbcp2.validation-query: select 1
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/wechat?default-character-set=utf8mb4&serverTimezone=GMT&createDatabaseIfNotExist=true&useSSL=false&verifyServerCertificate=true
+    url: jdbc:mysql://mydb.cquj69b1lpni.us-west-1.rds.amazonaws.com:3306/wechat?default-character-set=utf8mb4&serverTimezone=GMT&createDatabaseIfNotExist=true&useSSL=false&verifyServerCertificate=true
     username: root
-    password: Root@123
+    password: Root1234
 
   banner:
       charset: utf-8
@@ -76,7 +76,7 @@ spring:
   profiles: dev
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
       show-sql: true
       properties:
         hibernate:
@@ -85,6 +85,7 @@ spring:
     initialization-mode: always
 server:
   servlet:
+    context-path: /wechat
   port: 8888
 #  ssl:
 #    key-store: classpath:keystore.jks
@@ -119,8 +120,6 @@ spring:
   profiles:
     active: dev
 
-api:
-  base-path: /WeChat
 
 springfox:
   documentation:

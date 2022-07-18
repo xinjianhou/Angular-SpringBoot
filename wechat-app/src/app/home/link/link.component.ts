@@ -7,6 +7,7 @@ import { FileService, SearchService, TooltipService } from '../../_services';
 import { SearchModel, UploadedFileModel } from '../../_models';
 import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap';
 import { AlertComponent } from '../../alert/alert.component';
+import { KnowledgeModel } from '../../_models/knowledge.model';
 
 @Component({
   selector: 'app-link',
@@ -20,8 +21,9 @@ export class LinkComponent implements OnInit {
   currentFileUpload: File;
   progress: { percentage: number } = {percentage: 0};
 
+
   file: File;
-  results: SearchModel[];
+
 
   files: UploadedFileModel[];
 
@@ -41,7 +43,7 @@ export class LinkComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, config: NgbDatepickerConfig,
               private fileService: FileService, private modalService: BsModalService, private tooltipService: TooltipService,
-              private searchService: SearchService,) {
+  ) {
     config.maxDate = DateUtil.formatDate(new Date(1990, 1, 1));
     config.maxDate = DateUtil.formatDate(new Date(2099, 11, 31));
     config.outsideDays = 'collapsed';
@@ -49,7 +51,7 @@ export class LinkComponent implements OnInit {
 
   ngOnInit() {
     this.buildForm();
-    this.f.searchDate.setValue(DateUtil.formatDate());
+    //this.f.searchDate.setValue(DateUtil.formatDate());
     if (this.isLoggedIn) {
       this.getFileList();
     }
@@ -57,8 +59,10 @@ export class LinkComponent implements OnInit {
 
   buildForm(): void {
     this.linkForm = this.formBuilder.group({
-        searchDate: ['', [Validators.required]],
-        keyword: ['', [Validators.required]],
+        // searchDate: ['', [Validators.required]],
+        name: ['', [Validators.required]],
+        desc: [''],
+        path: ['', [Validators.required]],
 
       }
     );
@@ -70,7 +74,7 @@ export class LinkComponent implements OnInit {
 
   onSubmit(): void {
 
-    console.log(this.f.searchDate.value);
+    // console.log(this.f.searchDate.value);
 
   }
 
@@ -109,18 +113,6 @@ export class LinkComponent implements OnInit {
     );
   }
 
-  async download(file: UploadedFileModel): Promise<void> {
-    const blob = await this.fileService.downloadFile(file.id);
-    const url = window.URL.createObjectURL(blob);
-
-    const link = this.downloadFileLink.nativeElement;
-    link.href = url;
-    link.download = file.fileName;
-    link.click();
-
-    window.URL.revokeObjectURL(url);
-  }
-
   delete(file: UploadedFileModel): void {
     this.fileService.deleteFile(file).subscribe(
       res => {
@@ -149,9 +141,5 @@ export class LinkComponent implements OnInit {
     this.tooltipService.closeTooltips(...tooltips);
   }
 
-  doSearch() {
-    this.searchService.doSearch(this.f.keyword.value).subscribe(rs => {
-      this.results = rs;
-    });
-  }
+
 }

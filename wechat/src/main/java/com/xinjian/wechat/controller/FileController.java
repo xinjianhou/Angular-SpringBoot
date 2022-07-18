@@ -11,21 +11,21 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "${api.base-path}/file", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/file", produces = MediaType.APPLICATION_JSON_VALUE)
 public class FileController {
 
     @Autowired
     private FileService fileService;
 
     @PostMapping(value = "/download")
-    public FileSystemResource downloadFile(@RequestBody long id) {
-    File file = fileService.getFileById(id);
-    return new FileSystemResource(new java.io.File(file.getLocation()+file.getFileName()));
+    public FileSystemResource downloadFile(@RequestBody String path) {
+
+        return new FileSystemResource(new java.io.File(path));
 
     }
 
     @GetMapping
-    public List<File> getFileList(){
+    public List<File> getFileList() {
         return fileService.getFileList();
     }
 
@@ -35,13 +35,11 @@ public class FileController {
     }
 
     @DeleteMapping
-    public boolean delete(@RequestBody final File file){
-     return fileService.deleteFile(file);
-
+    public boolean delete(@RequestBody final File file) {
+        return fileService.deleteFile(file);
 
 
     }
-
 
 
 }

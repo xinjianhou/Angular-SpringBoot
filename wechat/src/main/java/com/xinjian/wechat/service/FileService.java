@@ -1,6 +1,7 @@
 package com.xinjian.wechat.service;
 
 import com.xinjian.wechat.domain.File;
+import com.xinjian.wechat.domain.Folder;
 import com.xinjian.wechat.repository.FileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,6 +41,9 @@ public class FileService {
     public File getFileById(long id) {
         return fileRepository.getOne(id);
     }
+    public File getFileByPath(String path) {
+        return fileRepository.findFileByFilePath(path);
+    }
 
     public boolean deleteFile(File file) {
         java.io.File f = new java.io.File(file.getLocation());
@@ -49,6 +53,14 @@ public class FileService {
         } else {
            return false;
         }
+
+    }
+    public boolean saveAll(List<File> files) {
+        List<File> fileList = fileRepository.saveAll(files);
+        if(fileList.containsAll(files)){
+            return true;
+        }
+        return false;
 
     }
 

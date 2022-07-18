@@ -20,20 +20,20 @@ public class File implements Serializable {
     @SequenceGenerator(name = "FILE_SEQ", sequenceName = "FILE_SEQ", initialValue = 1)
     private Long id;
 
-    @Column(name="FILE_NAME",length=30)
+    @Column(name="FILE_NAME",length=200)
     @NotNull
     private String fileName;
 
     @Column(name="FILE_SIZE")
-    @NotNull
+
     private Long fileSize;
 
-    @Column(name="LOCATION", length=100)
+    @Column(name="LOCATION", length=500)
     @NotNull
     private String location;
 
     @Column(name="UPLOAD_DATE")
-    @NotNull
+
     @CreatedDate
     private Date uploadDate;
 
