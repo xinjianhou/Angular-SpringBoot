@@ -6,13 +6,15 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class AuthUtil {
-    public static List<Authority> setAuthority(){
-        List<Authority> authorities= new ArrayList<>();
+    public static Set<Authority> setAuthority(){
+        Set<Authority> authorities= new HashSet<>();
         Authority athu = new Authority();
         athu.setId(2L);
         athu.setName(AuthorityName.ROLE_ADMIN);

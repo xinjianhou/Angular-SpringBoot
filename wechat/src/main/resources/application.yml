@@ -11,13 +11,12 @@ spring:
     time-zone: GMT+8
     serialization:
       write-dates-as-timestamps: false
-  # datasource
   datasource:
     dbcp2.validation-query: select 1
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/wechat?default-character-set=utf8mb4&serverTimezone=GMT&createDatabaseIfNotExist=true&useSSL=false&verifyServerCertificate=true
+    url: jdbc:mysql://mydb.cquj69b1lpni.us-west-1.rds.amazonaws.com:3306/wechat?default-character-set=utf8mb4&serverTimezone=GMT&createDatabaseIfNotExist=true&useSSL=false&verifyServerCertificate=true
     username: root
-    password: Root@123
+    password: Root1234
 
   banner:
       charset: utf-8
@@ -41,9 +40,9 @@ logging:
 
 
 # mybatis
-mybatis:
-  configuration:
-    map-underscore-to-camel-case: true
+#mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true
 
 
 management:
@@ -76,7 +75,7 @@ spring:
   profiles: dev
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
       show-sql: true
       properties:
         hibernate:
@@ -84,7 +83,6 @@ spring:
   datasource:
     initialization-mode: always
 server:
-  servlet:
   port: 8888
 #  ssl:
 #    key-store: classpath:keystore.jks
@@ -97,7 +95,7 @@ spring:
   profiles: prod
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
       show-sql: true
       properties:
         hibernate:
@@ -127,9 +125,9 @@ springfox:
     swagger:
       v2:
         path: /api-docs
-management:
-  server:
-    port: 8043
+#management:
+#  server:
+#    port: 8043
 
 file:
   source: /Users/xinjianhou/Documents

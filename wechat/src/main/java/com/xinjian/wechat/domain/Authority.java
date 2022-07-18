@@ -5,16 +5,17 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
-@Table(name = "AUTHORITY")
+@Table(name = "authority")
 public class Authority {
 
     @Id
     @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "AUTHORITY_SEQ")
-    @SequenceGenerator(name = "AUTHORITY_SEQ", sequenceName = "AUTHORITY_SEQ", initialValue = 3)
+    @GeneratedValue
     private Long id;
 
     @Column(name = "AUTHORITY_NAME", length = 50)
@@ -22,8 +23,8 @@ public class Authority {
     @Enumerated(EnumType.STRING)
     private AuthorityName name;
 
-//    @ManyToMany(mappedBy = "authorities", fetch = FetchType.LAZY)
-//    private List<User> users;
+    @ManyToMany(mappedBy = "authorities")
+    private Set<User> users;
 
 
 }
