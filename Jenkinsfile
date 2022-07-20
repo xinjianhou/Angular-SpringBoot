@@ -5,7 +5,7 @@ node {
   stage('SonarQube Analysis') {
     def mvn = tool 'maven';
     withSonarQubeEnv() {
-      cd wechat;
+      "cmd /c cd /d wechat";
       sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=wechat"
     }
   }
