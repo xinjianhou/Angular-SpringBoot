@@ -3,10 +3,10 @@ node {
     checkout scm
   }
   stage('SonarQube Analysis') {
-    def mvn = tool 'mvn';
+    def mvn = tool 'maven';
     withSonarQubeEnv() {
       cd wechart;
-      sh "${mvn} clean verify sonar:sonar -Dsonar.projectKey=wechat"
+      sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=wechat"
     }
   }
 }
